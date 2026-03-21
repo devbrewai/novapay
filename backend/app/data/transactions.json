@@ -1,0 +1,362 @@
+[
+  {
+    "id": "txn_001",
+    "date": "2026-03-20",
+    "merchant": "Whole Foods Market",
+    "category": "food",
+    "amount": -87.43,
+    "status": "completed",
+    "description": "Grocery shopping"
+  },
+  {
+    "id": "txn_002",
+    "date": "2026-03-19",
+    "merchant": "NovaPay Transfer",
+    "category": "transfer",
+    "amount": -500.00,
+    "status": "completed",
+    "description": "Transfer to savings"
+  },
+  {
+    "id": "txn_003",
+    "date": "2026-03-19",
+    "merchant": "Uber",
+    "category": "transport",
+    "amount": -24.50,
+    "status": "completed",
+    "description": "Ride to downtown"
+  },
+  {
+    "id": "txn_004",
+    "date": "2026-03-18",
+    "merchant": "Spotify",
+    "category": "subscriptions",
+    "amount": -9.99,
+    "status": "completed",
+    "description": "Monthly subscription"
+  },
+  {
+    "id": "txn_005",
+    "date": "2026-03-18",
+    "merchant": "Amazon",
+    "category": "shopping",
+    "amount": -156.78,
+    "status": "completed",
+    "description": "Electronics purchase"
+  },
+  {
+    "id": "txn_006",
+    "date": "2026-03-17",
+    "merchant": "Acme Corp",
+    "category": "income",
+    "amount": 4250.00,
+    "status": "completed",
+    "description": "Direct deposit — payroll"
+  },
+  {
+    "id": "txn_007",
+    "date": "2026-03-17",
+    "merchant": "Starbucks",
+    "category": "food",
+    "amount": -6.45,
+    "status": "completed",
+    "description": "Coffee"
+  },
+  {
+    "id": "txn_008",
+    "date": "2026-03-16",
+    "merchant": "Netflix",
+    "category": "subscriptions",
+    "amount": -15.49,
+    "status": "completed",
+    "description": "Monthly subscription"
+  },
+  {
+    "id": "txn_009",
+    "date": "2026-03-16",
+    "merchant": "StreamVault Inc",
+    "category": "entertainment",
+    "amount": -47.99,
+    "status": "completed",
+    "description": "Annual subscription"
+  },
+  {
+    "id": "txn_010",
+    "date": "2026-03-15",
+    "merchant": "Delta Airlines",
+    "category": "travel",
+    "amount": -389.00,
+    "status": "completed",
+    "description": "Flight booking — SFO to NYC"
+  },
+  {
+    "id": "txn_011",
+    "date": "2026-03-15",
+    "merchant": "Meridian Coffee Co",
+    "category": "food",
+    "amount": -14.25,
+    "status": "completed",
+    "description": "Coffee and pastry"
+  },
+  {
+    "id": "txn_012",
+    "date": "2026-03-14",
+    "merchant": "Luminary Fitness",
+    "category": "health",
+    "amount": -49.99,
+    "status": "completed",
+    "description": "Monthly membership"
+  },
+  {
+    "id": "txn_013",
+    "date": "2026-03-14",
+    "merchant": "Con Edison",
+    "category": "bills",
+    "amount": -142.30,
+    "status": "completed",
+    "description": "Electricity bill"
+  },
+  {
+    "id": "txn_014",
+    "date": "2026-03-13",
+    "merchant": "Apple",
+    "category": "shopping",
+    "amount": -29.99,
+    "status": "completed",
+    "description": "iCloud storage upgrade"
+  },
+  {
+    "id": "txn_015",
+    "date": "2026-03-12",
+    "merchant": "Lyft",
+    "category": "transport",
+    "amount": -18.75,
+    "status": "completed",
+    "description": "Ride to airport"
+  },
+  {
+    "id": "txn_016",
+    "date": "2026-03-11",
+    "merchant": "Zenith Electronics",
+    "category": "shopping",
+    "amount": -234.99,
+    "status": "pending",
+    "description": "Wireless headphones"
+  },
+  {
+    "id": "txn_017",
+    "date": "2026-03-10",
+    "merchant": "Chipotle",
+    "category": "food",
+    "amount": -12.85,
+    "status": "completed",
+    "description": "Lunch"
+  },
+  {
+    "id": "txn_018",
+    "date": "2026-03-09",
+    "merchant": "Google Cloud",
+    "category": "bills",
+    "amount": -32.47,
+    "status": "completed",
+    "description": "Cloud hosting"
+  },
+  {
+    "id": "txn_019",
+    "date": "2026-03-08",
+    "merchant": "Target",
+    "category": "shopping",
+    "amount": -67.32,
+    "status": "completed",
+    "description": "Household supplies"
+  },
+  {
+    "id": "txn_020",
+    "date": "2026-03-07",
+    "merchant": "Freelance Client",
+    "category": "income",
+    "amount": 1800.00,
+    "status": "completed",
+    "description": "Invoice #1042 payment"
+  },
+  {
+    "id": "txn_021",
+    "date": "2026-03-06",
+    "merchant": "Trader Joe's",
+    "category": "food",
+    "amount": -54.12,
+    "status": "completed",
+    "description": "Grocery shopping"
+  },
+  {
+    "id": "txn_022",
+    "date": "2026-03-05",
+    "merchant": "AT&T",
+    "category": "bills",
+    "amount": -85.00,
+    "status": "completed",
+    "description": "Phone bill"
+  },
+  {
+    "id": "txn_023",
+    "date": "2026-03-04",
+    "merchant": "Uber Eats",
+    "category": "food",
+    "amount": -31.48,
+    "status": "completed",
+    "description": "Food delivery"
+  },
+  {
+    "id": "txn_024",
+    "date": "2026-03-03",
+    "merchant": "Acme Corp",
+    "category": "income",
+    "amount": 4250.00,
+    "status": "completed",
+    "description": "Direct deposit — payroll"
+  },
+  {
+    "id": "txn_025",
+    "date": "2026-03-02",
+    "merchant": "NovaPay Transfer",
+    "category": "transfer",
+    "amount": -300.00,
+    "status": "completed",
+    "description": "Transfer to joint account"
+  },
+  {
+    "id": "txn_026",
+    "date": "2026-03-01",
+    "merchant": "Rent Payment",
+    "category": "bills",
+    "amount": -2100.00,
+    "status": "completed",
+    "description": "Monthly rent"
+  },
+  {
+    "id": "txn_027",
+    "date": "2026-02-28",
+    "merchant": "CVS Pharmacy",
+    "category": "health",
+    "amount": -23.45,
+    "status": "completed",
+    "description": "Prescription"
+  },
+  {
+    "id": "txn_028",
+    "date": "2026-02-27",
+    "merchant": "AMC Theatres",
+    "category": "entertainment",
+    "amount": -32.00,
+    "status": "completed",
+    "description": "Movie tickets"
+  },
+  {
+    "id": "txn_029",
+    "date": "2026-02-26",
+    "merchant": "Verizon",
+    "category": "bills",
+    "amount": -45.00,
+    "status": "completed",
+    "description": "Internet bill"
+  },
+  {
+    "id": "txn_030",
+    "date": "2026-02-25",
+    "merchant": "DoorDash",
+    "category": "food",
+    "amount": -28.92,
+    "status": "completed",
+    "description": "Food delivery"
+  },
+  {
+    "id": "txn_031",
+    "date": "2026-02-24",
+    "merchant": "NovaPay Interest",
+    "category": "income",
+    "amount": 12.84,
+    "status": "completed",
+    "description": "Monthly interest earned"
+  },
+  {
+    "id": "txn_032",
+    "date": "2026-02-22",
+    "merchant": "Shell Gas Station",
+    "category": "transport",
+    "amount": -52.30,
+    "status": "completed",
+    "description": "Gas fill-up"
+  },
+  {
+    "id": "txn_033",
+    "date": "2026-02-20",
+    "merchant": "Acme Corp",
+    "category": "income",
+    "amount": 4250.00,
+    "status": "completed",
+    "description": "Direct deposit — payroll"
+  },
+  {
+    "id": "txn_034",
+    "date": "2026-02-18",
+    "merchant": "Airbnb",
+    "category": "travel",
+    "amount": -198.00,
+    "status": "completed",
+    "description": "Weekend stay — Lake Tahoe"
+  },
+  {
+    "id": "txn_035",
+    "date": "2026-02-15",
+    "merchant": "Adobe Creative Cloud",
+    "category": "subscriptions",
+    "amount": -54.99,
+    "status": "completed",
+    "description": "Monthly subscription"
+  },
+  {
+    "id": "txn_036",
+    "date": "2026-02-14",
+    "merchant": "Bloomingdale's",
+    "category": "shopping",
+    "amount": -145.00,
+    "status": "completed",
+    "description": "Gift purchase"
+  },
+  {
+    "id": "txn_037",
+    "date": "2026-02-12",
+    "merchant": "Xfinity Mobile",
+    "category": "bills",
+    "amount": -65.00,
+    "status": "failed",
+    "description": "Auto-pay failed — card expired"
+  },
+  {
+    "id": "txn_038",
+    "date": "2026-02-10",
+    "merchant": "Costco",
+    "category": "shopping",
+    "amount": -213.47,
+    "status": "completed",
+    "description": "Bulk groceries"
+  },
+  {
+    "id": "txn_039",
+    "date": "2026-02-08",
+    "merchant": "NovaPay Cashback",
+    "category": "income",
+    "amount": 34.52,
+    "status": "completed",
+    "description": "Monthly cashback reward"
+  },
+  {
+    "id": "txn_040",
+    "date": "2026-02-05",
+    "merchant": "Acme Corp",
+    "category": "income",
+    "amount": 4250.00,
+    "status": "completed",
+    "description": "Direct deposit — payroll"
+  }
+]

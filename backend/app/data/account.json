@@ -1,0 +1,15 @@
+{
+  "id": "usr_001",
+  "name": "Alex Rivera",
+  "email": "alex.rivera@email.com",
+  "account_number": "****4821",
+  "tier": "Premium",
+  "balance": 12847.32,
+  "currency": "USD",
+  "monthly_change": 3.2,
+  "join_date": "2024-03-15",
+  "cards": [
+    { "type": "Virtual", "last4": "7823", "status": "Active" },
+    { "type": "Physical", "last4": "4129", "status": "Active" }
+  ]
+}
