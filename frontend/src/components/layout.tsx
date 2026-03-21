@@ -2,6 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sidebar, type Page } from "@/components/sidebar";
+import { ChatTrigger } from "@/components/chat-trigger";
 
 interface LayoutProps {
   children: (activePage: Page) => ReactNode;
@@ -36,6 +37,8 @@ export function Layout({ children }: LayoutProps) {
           <div className="mx-auto max-w-4xl">{children(activePage)}</div>
         </main>
       </div>
+
+      <ChatTrigger />
     </div>
   );
 }
