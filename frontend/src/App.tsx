@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout";
 import { AccountSummary } from "@/components/account-summary";
+import { TransactionList } from "@/components/transaction-list";
 import type { Page } from "@/components/sidebar";
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
         </p>
       </div>
       <AccountSummary />
+      <TransactionList />
     </div>
   );
 }
