@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from app.types import Chunk
 
 
@@ -15,11 +13,8 @@ def split_into_paragraphs(text: str) -> list[str]:
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
     return paragraphs
 
-def chunk_paragraphs(
-    paragraphs: list[str],
-    max_tokens: int,
-    overlap: int
-) -> list[str]:
+
+def chunk_paragraphs(paragraphs: list[str], max_tokens: int, overlap: int) -> list[str]:
     """Group paragraphs into chunks within token limit with overlap."""
     current_chunk: list[str] = []
     current_size = 0
@@ -40,13 +35,9 @@ def chunk_paragraphs(
 
     return chunks
 
+
 def chunk_document(
-    doc_id: str, 
-    text: str, 
-    source: str, 
-    category: str, 
-    max_tokens: int, 
-    overlap: int
+    doc_id: str, text: str, source: str, category: str, max_tokens: int, overlap: int
 ) -> list[Chunk]:
     """Group document into chunks."""
     paragraphs = split_into_paragraphs(text)
@@ -69,29 +60,3 @@ def chunk_document(
         chunks.append(chunk)
 
     return chunks
-
-def process_knowledge_base(
-    directory_path: str, 
-    max_tokens: int, 
-    overlap: int
-) -> list[Chunk]:
-    """Process each file in directory and return document chunks."""
-    file_path = Path(directory_path).glob("*.md")
-
-    chunks = []
-
-    for file in file_path:
-        text = file.read_text()
-        doc_id = file.stem
-        filename = file.name
-        doc_chunks = chunk_document(doc_id, text, filename, doc_id, max_tokens, overlap)
-        chunks.extend(doc_chunks)
-    
-    return chunks
-
-if __name__ == "__main__":
-    chunks = process_knowledge_base("data/knowledge_base", 400, 1)
-    print(f"Total chunks: {len(chunks)}")
-    for chunk in chunks[:3]:
-        print(f"\n--- {chunk['id']} ---")
-        print(chunk["text"][:200])
