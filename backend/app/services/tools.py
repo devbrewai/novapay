@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from app.services.email import send_escalation_email
+
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
@@ -49,7 +51,8 @@ def account_info() -> str:
 
 
 def escalate_to_human(reason: str) -> str:
-    """Escalate the conversation to a human agent."""
+    """Escalate the conversation to a human agent and send notification email."""
+    send_escalation_email(reason)
     return (
         f"I've escalated this to our support team. "
         f"Reason: {reason}. "
