@@ -1,11 +1,7 @@
 from fastapi.testclient import TestClient
 
-from app.main import app
 
-client = TestClient(app)
-
-
-def test_account_returns_ok() -> None:
+def test_account_returns_ok(client: TestClient) -> None:
     response = client.get("/api/account")
     assert response.status_code == 200
     data = response.json()

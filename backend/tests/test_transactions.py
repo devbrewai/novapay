@@ -1,11 +1,7 @@
 from fastapi.testclient import TestClient
 
-from app.main import app
 
-client = TestClient(app)
-
-
-def test_transactions_returns_list() -> None:
+def test_transactions_returns_list(client: TestClient) -> None:
     response = client.get("/api/transactions")
     assert response.status_code == 200
     data = response.json()
@@ -13,7 +9,7 @@ def test_transactions_returns_list() -> None:
     assert len(data) == 40
 
 
-def test_transaction_has_required_fields() -> None:
+def test_transaction_has_required_fields(client: TestClient) -> None:
     response = client.get("/api/transactions")
     txn = response.json()[0]
     assert "id" in txn
