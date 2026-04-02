@@ -4,6 +4,7 @@ from collections.abc import Iterator
 from typing import Any
 
 import anthropic
+import httpx
 from anthropic.types import MessageParam
 
 from app.config import settings
@@ -88,8 +89,14 @@ MODEL = "claude-sonnet-4-20250514"
 
 
 def get_anthropic_client() -> anthropic.Anthropic:
-    """Initialize the Anthropic client."""
-    return anthropic.Anthropic(api_key=settings.anthropic_api_key)
+    """Initialize the Anthropic client with retry and fresh connections."""
+    transport = httpx.HTTPTransport(retries=3)
+    http_client = httpx.Client(transport=transport)
+    return anthropic.Anthropic(
+        api_key=settings.anthropic_api_key,
+        max_retries=3,
+        http_client=http_client,
+    )
 
 
 def build_system_prompt(context: str) -> str:
