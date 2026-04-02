@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sidebar, type Page } from "@/components/sidebar";
 import { ChatTrigger } from "@/components/chat-trigger";
+import { ChatPanel } from "@/components/chat";
 
 interface LayoutProps {
   children: (activePage: Page) => ReactNode;
@@ -11,6 +12,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const [activePage, setActivePage] = useState<Page>("home");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <div className="flex h-screen bg-muted/40">
@@ -38,7 +40,8 @@ export function Layout({ children }: LayoutProps) {
         </main>
       </div>
 
-      <ChatTrigger />
+      {!chatOpen && <ChatTrigger onOpen={() => setChatOpen(true)} />}
+      <ChatPanel open={chatOpen} onClose={() => setChatOpen(false)} />
     </div>
   );
 }
