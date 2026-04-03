@@ -1,4 +1,8 @@
+from pathlib import Path
+
 from pydantic_settings import BaseSettings
+
+_BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
@@ -14,7 +18,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     chat_rate_limit: int = 5
 
-    model_config = {"env_file": ".env"}
+    model_config = {"env_file": str(_BASE_DIR / ".env")}
 
 
 settings = Settings()
