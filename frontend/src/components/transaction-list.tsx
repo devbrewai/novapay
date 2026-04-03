@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { TransactionItem } from "@/components/transaction-item";
@@ -8,23 +7,24 @@ export function TransactionList() {
   const recentTransactions = mockTransactions.slice(0, 10);
 
   return (
-    <Card>
-      <CardHeader className="flex-row items-center justify-between space-y-0 pb-4">
-        <CardTitle className="font-heading text-base font-semibold">
+    <div className="mt-8">
+      <div className="flex items-center justify-between mb-4 px-1">
+        <h3 className="font-heading text-lg font-semibold text-foreground">
           Recent Transactions
-        </CardTitle>
-        <Button variant="link" size="sm" className="text-xs text-primary hover:text-accent">
-          View all
+        </h3>
+        <Button variant="ghost" className="text-sm font-medium text-primary hover:bg-transparent hover:underline">
+          See all
         </Button>
-      </CardHeader>
-      <CardContent className="pt-0">
+      </div>
+
+      <div className="rounded-xl bg-card border-none shadow-sm ring-1 ring-border/50 overflow-hidden">
         {recentTransactions.map((txn, i) => (
           <div key={txn.id}>
-            {i > 0 && <Separator />}
+            {i > 0 && <Separator className="ml-14" />}
             <TransactionItem transaction={txn} />
           </div>
         ))}
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

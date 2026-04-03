@@ -15,7 +15,7 @@ export function Layout({ children }: LayoutProps) {
   const [chatOpen, setChatOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-muted/40">
+    <div className="flex h-screen bg-background">
       <Sidebar
         activePage={activePage}
         onNavigate={setActivePage}
@@ -24,7 +24,7 @@ export function Layout({ children }: LayoutProps) {
       />
 
       <div className="flex flex-1 flex-col overflow-hidden">
-        <header className="flex h-14 items-center gap-3 border-b border-border bg-card px-4 md:hidden">
+        <header className="flex h-16 items-center gap-3 border-b border-border bg-card px-4 md:hidden shadow-sm">
           <Button
             variant="ghost"
             size="icon"
@@ -32,11 +32,13 @@ export function Layout({ children }: LayoutProps) {
           >
             <Menu className="size-5" />
           </Button>
-          <span className="font-heading text-lg font-semibold">NovaPay</span>
+          <span className="font-heading text-lg font-bold text-foreground">NovaPay</span>
         </header>
 
-        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
-          <div className="mx-auto max-w-4xl">{children(activePage)}</div>
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">
+          <div className="mx-auto max-w-5xl">
+            {children(activePage)}
+          </div>
         </main>
       </div>
 

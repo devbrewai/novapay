@@ -50,38 +50,50 @@
 }
 
 :root {
-    --background: #FBFFFD;
-    --foreground: #001F00;
-    --card: #FBFFFD;
-    --card-foreground: #001F00;
-    --popover: #FBFFFD;
-    --popover-foreground: #001F00;
-    --primary: #005526;
-    --primary-foreground: #ffffff;
-    --secondary: #D5E1D4;
-    --secondary-foreground: #001F00;
-    --muted: #EBF5EC;
-    --muted-foreground: #3F4F3D;
-    --accent: #004E20;
-    --accent-foreground: #ffffff;
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: #D5E1D4;
-    --input: #D5E1D4;
-    --ring: #005526;
-    --chart-1: #005526;
-    --chart-2: #3F4F3D;
-    --chart-3: #D5E1D4;
-    --chart-4: #004E20;
-    --chart-5: #EBF5EC;
-    --radius: 0.625rem;
-    --sidebar: #FBFFFD;
-    --sidebar-foreground: #001F00;
-    --sidebar-primary: #005526;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #EBF5EC;
-    --sidebar-accent-foreground: #001F00;
-    --sidebar-border: #D5E1D4;
-    --sidebar-ring: #005526;
+    /* Neutral gray background, pure white cards */
+    --background: #F3F4F6;
+    --foreground: #111827;
+
+    --card: #FFFFFF;
+    --card-foreground: #111827;
+
+    --popover: #FFFFFF;
+    --popover-foreground: #111827;
+
+    /* Sleek, deep emerald for primary actions */
+    --primary: #054F31;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #F3F4F6;
+    --secondary-foreground: #111827;
+
+    --muted: #F9FAFB;
+    --muted-foreground: #6B7280;
+
+    --accent: #E5E7EB;
+    --accent-foreground: #111827;
+
+    --destructive: #EF4444;
+    --border: #E5E7EB;
+    --input: #E5E7EB;
+    --ring: #054F31;
+
+    --radius: 0.75rem;
+
+    --chart-1: #054F31;
+    --chart-2: #6B7280;
+    --chart-3: #E5E7EB;
+    --chart-4: #054F31;
+    --chart-5: #F9FAFB;
+
+    --sidebar: #FFFFFF;
+    --sidebar-foreground: #111827;
+    --sidebar-primary: #054F31;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #F3F4F6;
+    --sidebar-accent-foreground: #111827;
+    --sidebar-border: #E5E7EB;
+    --sidebar-ring: #054F31;
 }
 
 .dark {
@@ -121,14 +133,15 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
   body {
     @apply bg-background text-foreground;
-    }
+  }
   html {
-    @apply font-sans;
-    }
+    @apply font-sans antialiased;
+  }
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    }
+    @apply tracking-tight;
+  }
 }
