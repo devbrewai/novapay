@@ -31,10 +31,10 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
 
   return (
     <>
-      {/* Backdrop — mobile only */}
+      {/* Blurred Backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          className="fixed inset-0 z-40 bg-foreground/5 backdrop-blur-sm transition-all"
           onClick={onClose}
         />
       )}
@@ -44,7 +44,7 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
         ref={panelRef}
         tabIndex={-1}
         className={cn(
-          "fixed right-0 top-0 z-50 flex h-full w-full flex-col border-l border-border bg-card shadow-2xl outline-none transition-transform duration-300 ease-in-out md:w-[40%] md:min-w-[400px]",
+          "fixed right-0 top-0 bottom-0 z-50 flex h-full w-full flex-col overflow-hidden border-l border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl outline-none transition-transform duration-400 ease-out md:w-[45%] md:min-w-[420px] md:max-w-[480px] md:rounded-l-3xl md:my-2 md:h-[calc(100%-16px)] md:border md:border-r-0 md:border-border/50",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
