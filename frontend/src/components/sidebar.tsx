@@ -1,10 +1,5 @@
-import {
-  Home,
-  ArrowLeftRight,
-  CreditCard,
-  Settings,
-  type LucideIcon,
-} from "lucide-react";
+import type { ComponentType } from "react";
+import { Home, Shuffle, CreditCard, Settings } from "react-feather";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -16,12 +11,12 @@ export type Page = "home" | "transactions" | "cards" | "settings";
 interface NavItem {
   id: Page;
   label: string;
-  icon: LucideIcon;
+  icon: ComponentType<{ size?: number; className?: string }>;
 }
 
 const navItems: NavItem[] = [
   { id: "home", label: "Home", icon: Home },
-  { id: "transactions", label: "Transactions", icon: ArrowLeftRight },
+  { id: "transactions", label: "Transactions", icon: Shuffle },
   { id: "cards", label: "Cards", icon: CreditCard },
   { id: "settings", label: "Settings", icon: Settings },
 ];
@@ -43,7 +38,7 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
     <>
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/30 md:hidden"
+          className="fixed inset-0 z-40 bg-foreground/20 md:hidden"
           onClick={onClose}
         />
       )}
@@ -56,9 +51,9 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
       >
         <div className="flex h-14 items-center gap-2 px-5">
           <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">N</span>
+            <span className="font-heading text-sm font-semibold text-primary-foreground">N</span>
           </div>
-          <span className="text-lg font-semibold tracking-tight">NovaPay</span>
+          <span className="font-heading text-lg font-semibold tracking-tight">NovaPay</span>
         </div>
 
         <Separator />
@@ -74,13 +69,13 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
                   onClose();
                 }}
                 className={cn(
-                  "flex w-full cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  "flex w-full cursor-pointer items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   isActive
                     ? "bg-primary/10 text-primary"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
-                <item.icon className="size-4" />
+                <item.icon size={16} />
                 {item.label}
               </button>
             );
