@@ -1,4 +1,4 @@
-import { ArrowUpRight, Send, Download, Receipt } from "lucide-react";
+import { ArrowUpRight, Send, Download, FileText } from "react-feather";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { mockAccount } from "@/data";
 const quickActions = [
   { label: "Send", icon: Send },
   { label: "Request", icon: Download },
-  { label: "Pay Bills", icon: Receipt },
+  { label: "Pay Bills", icon: FileText },
 ] as const;
 
 function formatCurrency(amount: number): string {
@@ -27,17 +27,18 @@ export function AccountSummary() {
         <div className="flex items-start justify-between">
           <div>
             <p className="text-sm text-muted-foreground">Total Balance</p>
-            <p className="mt-1 text-3xl font-bold tracking-tight">
+            <p className="font-heading mt-1 text-3xl font-semibold tracking-tight">
               {formatCurrency(mockAccount.balance)}
             </p>
             <div className="mt-2 flex items-center gap-1.5">
               <span
                 className={`flex items-center gap-0.5 text-xs font-medium ${
-                  changeIsPositive ? "text-emerald-600" : "text-red-500"
+                  changeIsPositive ? "text-primary" : "text-destructive"
                 }`}
               >
                 <ArrowUpRight
-                  className={`size-3 ${!changeIsPositive ? "rotate-90" : ""}`}
+                  size={12}
+                  className={!changeIsPositive ? "rotate-90" : ""}
                 />
                 {changeIsPositive ? "+" : ""}
                 {mockAccount.monthlyChange}%
@@ -53,7 +54,7 @@ export function AccountSummary() {
         <div className="mt-6 flex gap-2">
           {quickActions.map((action) => (
             <Button key={action.label} variant="outline" size="sm">
-              <action.icon data-icon="inline-start" className="size-4" />
+              <action.icon size={16} />
               {action.label}
             </Button>
           ))}
