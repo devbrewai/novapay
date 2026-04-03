@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { Menu } from "lucide-react";
+import { Menu } from "react-feather";
 import { Button } from "@/components/ui/button";
 import { Sidebar, type Page } from "@/components/sidebar";
 import { ChatTrigger } from "@/components/chat-trigger";
@@ -32,7 +32,7 @@ export function Layout({ children }: LayoutProps) {
           >
             <Menu className="size-5" />
           </Button>
-          <span className="text-lg font-semibold">NovaPay</span>
+          <span className="font-heading text-lg font-semibold">NovaPay</span>
         </header>
 
         <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
