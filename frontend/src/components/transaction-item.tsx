@@ -20,16 +20,16 @@ const categoryConfig: Record<
   TransactionCategory,
   { icon: FeatherIcon; color: string }
 > = {
-  food: { icon: Coffee, color: "bg-primary/10 text-primary" },
-  transport: { icon: Navigation, color: "bg-primary/10 text-primary" },
-  shopping: { icon: ShoppingBag, color: "bg-primary/10 text-primary" },
-  entertainment: { icon: Film, color: "bg-primary/10 text-primary" },
-  bills: { icon: FileText, color: "bg-primary/10 text-primary" },
-  income: { icon: TrendingUp, color: "bg-primary/10 text-primary" },
-  transfer: { icon: Shuffle, color: "bg-primary/10 text-primary" },
-  health: { icon: Heart, color: "bg-primary/10 text-primary" },
-  travel: { icon: Map, color: "bg-primary/10 text-primary" },
-  subscriptions: { icon: Tv, color: "bg-primary/10 text-primary" },
+  food: { icon: Coffee, color: "bg-primary/5 text-primary" },
+  transport: { icon: Navigation, color: "bg-primary/5 text-primary" },
+  shopping: { icon: ShoppingBag, color: "bg-primary/5 text-primary" },
+  entertainment: { icon: Film, color: "bg-primary/5 text-primary" },
+  bills: { icon: FileText, color: "bg-primary/5 text-primary" },
+  income: { icon: TrendingUp, color: "bg-primary/5 text-primary" },
+  transfer: { icon: Shuffle, color: "bg-primary/5 text-primary" },
+  health: { icon: Heart, color: "bg-primary/5 text-primary" },
+  travel: { icon: Map, color: "bg-primary/5 text-primary" },
+  subscriptions: { icon: Tv, color: "bg-primary/5 text-primary" },
 };
 
 function formatDate(dateStr: string): string {
