@@ -31,21 +31,27 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
 
   return (
     <>
-      {/* Blurred Backdrop */}
+      {/* Backdrop — click to dismiss */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-foreground/5 backdrop-blur-sm transition-all"
+          className="fixed inset-0 z-40 bg-foreground/5 backdrop-blur-sm transition-all md:bg-transparent md:backdrop-blur-none"
           onClick={onClose}
         />
       )}
 
-      {/* Panel */}
+      {/* Floating chat bubble */}
       <div
         ref={panelRef}
         tabIndex={-1}
         className={cn(
-          "fixed right-0 top-0 bottom-0 z-50 flex h-full w-full flex-col overflow-hidden border-l border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl outline-none transition-transform duration-400 ease-out md:w-[45%] md:min-w-[420px] md:max-w-[480px] md:rounded-l-3xl md:my-2 md:h-[calc(100%-16px)] md:border md:border-r-0 md:border-border/50",
-          open ? "translate-x-0" : "translate-x-full",
+          "fixed z-50 flex flex-col overflow-hidden bg-card outline-none shadow-[0_16px_70px_rgb(0,0,0,0.12)] transition-all duration-300 ease-out",
+          // Mobile: fullscreen
+          "inset-0 h-full w-full rounded-none",
+          // Desktop: floating bubble, bottom-right
+          "md:inset-auto md:bottom-6 md:right-6 md:h-[min(75vh,640px)] md:w-[400px] md:rounded-2xl md:border md:border-border/50",
+          open
+            ? "scale-100 opacity-100"
+            : "pointer-events-none scale-95 opacity-0 md:translate-y-4",
         )}
       >
         <ChatHeader onClose={onClose} />
