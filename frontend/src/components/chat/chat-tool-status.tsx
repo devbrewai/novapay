@@ -1,4 +1,4 @@
-import { Loader2, CheckCircle2 } from "lucide-react";
+import { Loader, CheckCircle } from "react-feather";
 import type { ToolUseEvent } from "@/types";
 
 const TOOL_LABELS: Record<string, string> = {
@@ -18,9 +18,9 @@ export function ChatToolStatus({ toolUse }: ChatToolStatusProps) {
   return (
     <div className="mb-2 flex items-center gap-2 text-xs text-muted-foreground">
       {isRunning ? (
-        <Loader2 className="size-3 animate-spin" />
+        <Loader size={12} className="animate-spin" />
       ) : (
-        <CheckCircle2 className="size-3 text-primary" />
+        <CheckCircle size={12} className="text-primary" />
       )}
       <span>{label}{isRunning ? "..." : ""}</span>
     </div>

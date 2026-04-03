@@ -1,4 +1,4 @@
-import { Minus, X } from "lucide-react";
+import { Minus, X } from "react-feather";
 import { Button } from "@/components/ui/button";
 
 interface ChatHeaderProps {
@@ -11,10 +11,10 @@ export function ChatHeader({ onClose }: ChatHeaderProps) {
       <h2 className="text-sm font-semibold">Ask Nova</h2>
       <div className="flex items-center gap-1">
         <Button variant="ghost" size="icon" className="size-7">
-          <Minus className="size-3.5" />
+          <Minus size={14} />
         </Button>
         <Button variant="ghost" size="icon" className="size-7" onClick={onClose}>
-          <X className="size-3.5" />
+          <X size={14} />
         </Button>
       </div>
     </div>

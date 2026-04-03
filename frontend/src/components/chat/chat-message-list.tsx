@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { AlertCircle, RefreshCw } from "lucide-react";
+import { AlertCircle, RefreshCw } from "react-feather";
 import type { ChatMessage as ChatMessageType, ChatStatus } from "@/types";
 import { ChatMessage } from "./chat-message";
 import { ChatEmptyState } from "./chat-empty-state";
@@ -39,13 +39,13 @@ export function ChatMessageList({
         )}
         {status === "error" && messages.length > 0 && (
           <div className="flex items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive animate-in fade-in duration-200">
-            <AlertCircle className="size-4 shrink-0" />
+            <AlertCircle size={16} className="shrink-0" />
             <span className="flex-1">Connection failed.</span>
             <button
               onClick={onRetry}
               className="flex items-center gap-1 text-xs underline hover:no-underline"
             >
-              <RefreshCw className="size-3" />
+              <RefreshCw size={12} />
               Retry
             </button>
           </div>
