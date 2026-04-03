@@ -1,5 +1,6 @@
 from collections.abc import Iterator
 from contextlib import asynccontextmanager
+from datetime import timedelta
 from unittest.mock import Mock
 
 import pytest
@@ -7,6 +8,7 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
 from app.services.conversation import ConversationManager
+from app.services.rate_limiter import RateLimiter
 
 
 @pytest.fixture()
@@ -19,6 +21,7 @@ def client() -> Iterator[TestClient]:
         app.state.collection = Mock()
         app.state.anthropic_client = Mock()
         app.state.conversation_manager = ConversationManager()
+        app.state.rate_limiter = RateLimiter(limit=100, window=timedelta(hours=1))
         yield
 
     from app.main import app
