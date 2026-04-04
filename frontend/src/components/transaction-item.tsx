@@ -17,7 +17,7 @@ import type { Transaction, TransactionCategory } from "@/types";
 
 type FeatherIcon = ComponentType<{ size?: number; className?: string }>;
 
-const categoryConfig: Record<
+export const categoryConfig: Record<
   TransactionCategory,
   { icon: FeatherIcon; color: string }
 > = {
@@ -33,7 +33,7 @@ const categoryConfig: Record<
   subscriptions: { icon: Tv, color: "bg-primary/5 text-primary" },
 };
 
-const merchantDomains: Record<string, string> = {
+export const merchantDomains: Record<string, string> = {
   Uber: "uber.com",
   Spotify: "spotify.com",
   Amazon: "amazon.com",
@@ -56,7 +56,7 @@ const merchantDomains: Record<string, string> = {
   "Uber Eats": "ubereats.com",
 };
 
-const LOGO_API_KEY = import.meta.env.VITE_LOGO_DEV_API_KEY;
+export const LOGO_API_KEY = import.meta.env.VITE_LOGO_DEV_API_KEY;
 
 function formatAmount(amount: number): string {
   const formatted = new Intl.NumberFormat("en-US", {
@@ -69,8 +69,10 @@ function formatAmount(amount: number): string {
 
 export function TransactionItem({
   transaction,
+  onClick,
 }: {
   transaction: Transaction;
+  onClick?: () => void;
 }) {
   const [imgError, setImgError] = useState(false);
   const config = categoryConfig[transaction.category];
@@ -84,7 +86,7 @@ export function TransactionItem({
       : null;
 
   return (
-    <div className="flex items-center gap-4 px-5 py-4 hover:bg-muted/50 transition-colors cursor-pointer active:scale-[0.99] select-none group">
+    <div onClick={onClick} className="flex items-center gap-4 px-5 py-4 hover:bg-muted/50 transition-colors cursor-pointer active:scale-[0.99] select-none group">
       <div
         className={`relative flex size-10 shrink-0 items-center justify-center rounded-full overflow-hidden ${!logoUrl ? config.color : "bg-white ring-1 ring-border/50"}`}
       >

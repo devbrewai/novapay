@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { TransactionItem } from "@/components/transaction-item";
+import { TransactionDetails } from "@/components/transaction-details";
 import { mockTransactions } from "@/data";
 import type { Transaction } from "@/types";
 
@@ -21,6 +23,8 @@ function formatHeaderDate(dateString: string) {
 }
 
 export function TransactionList() {
+  const [selectedTxn, setSelectedTxn] = useState<Transaction | null>(null);
+
   const groupedTransactions = mockTransactions
     .slice(0, 15)
     .reduce<Record<string, Transaction[]>>((acc, txn) => {
@@ -30,6 +34,7 @@ export function TransactionList() {
     }, {});
 
   return (
+    <>
     <div className="mt-8">
       <div className="flex items-center justify-between mb-4 px-1">
         <h3 className="font-heading text-lg font-bold text-foreground">
@@ -58,7 +63,7 @@ export function TransactionList() {
                   {i > 0 && (
                     <Separator className="ml-[68px] absolute top-0 right-0 w-[calc(100%-68px)]" />
                   )}
-                  <TransactionItem transaction={txn} />
+                  <TransactionItem transaction={txn} onClick={() => setSelectedTxn(txn)} />
                 </div>
               ))}
             </div>
@@ -66,5 +71,11 @@ export function TransactionList() {
         ))}
       </div>
     </div>
+
+    <TransactionDetails
+      transaction={selectedTxn}
+      onClose={() => setSelectedTxn(null)}
+    />
+    </>
   );
 }
