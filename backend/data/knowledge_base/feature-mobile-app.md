@@ -2,7 +2,7 @@
 
 ## Download
 
-The NovaPay app is available for free:
+The Nova app is available for free:
 - **iPhone:** Download from the App Store (requires iOS 16 or later)
 - **Android:** Download from the Google Play Store (requires Android 12 or later)
 
@@ -26,7 +26,7 @@ The NovaPay app is available for free:
 - Set spending limits and merchant controls
 
 ### Send Money
-- Send money to other NovaPay users, external bank accounts, or internationally
+- Send money to other Nova users, external bank accounts, or internationally
 - Save frequent recipients for quick transfers
 - Schedule future or recurring transfers
 

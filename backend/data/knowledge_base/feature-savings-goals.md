@@ -2,7 +2,7 @@
 
 ## Overview
 
-NovaPay Savings Goals help you save for specific purposes by setting aside money in dedicated goal buckets within your account. This feature is available to Premium account holders.
+Nova Savings Goals help you save for specific purposes by setting aside money in dedicated goal buckets within your account. This feature is available to Premium account holders.
 
 ## Creating a Savings Goal
 

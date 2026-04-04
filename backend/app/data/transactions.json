@@ -11,7 +11,7 @@
   {
     "id": "txn_002",
     "date": "2026-03-19",
-    "merchant": "NovaPay Transfer",
+    "merchant": "Nova Transfer",
     "category": "transfer",
     "amount": -500.00,
     "status": "completed",
@@ -218,7 +218,7 @@
   {
     "id": "txn_025",
     "date": "2026-03-02",
-    "merchant": "NovaPay Transfer",
+    "merchant": "Nova Transfer",
     "category": "transfer",
     "amount": -300.00,
     "status": "completed",
@@ -272,7 +272,7 @@
   {
     "id": "txn_031",
     "date": "2026-02-24",
-    "merchant": "NovaPay Interest",
+    "merchant": "Nova Interest",
     "category": "income",
     "amount": 12.84,
     "status": "completed",
@@ -344,7 +344,7 @@
   {
     "id": "txn_039",
     "date": "2026-02-08",
-    "merchant": "NovaPay Cashback",
+    "merchant": "Nova Cashback",
     "category": "income",
     "amount": 34.52,
     "status": "completed",

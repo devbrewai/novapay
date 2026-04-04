@@ -2,7 +2,7 @@
 
 ## What Is a Pending Transaction?
 
-A pending transaction is a charge that has been authorized but not yet fully processed. When you make a purchase with your NovaPay card, the merchant's bank sends an authorization request. NovaPay approves the request and puts a temporary hold on your funds.
+A pending transaction is a charge that has been authorized but not yet fully processed. When you make a purchase with your Nova card, the merchant's bank sends an authorization request. Nova approves the request and puts a temporary hold on your funds.
 
 ## How Long Do Transactions Stay Pending?
 
@@ -20,7 +20,7 @@ Pending transactions reduce your available balance but do not appear as complete
 
 ## Can I Cancel a Pending Transaction?
 
-NovaPay cannot cancel pending transactions because they are controlled by the merchant's bank. However:
+Nova cannot cancel pending transactions because they are controlled by the merchant's bank. However:
 
 - If the merchant has not yet captured the funds, you can contact the merchant directly to request cancellation
 - If the pending charge does not match what you expected, wait for it to complete and then file a dispute

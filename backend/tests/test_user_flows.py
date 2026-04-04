@@ -199,7 +199,7 @@ def test_flow_onboarding_direct_deposit(mock_retrieve: Mock, mock_create: Mock) 
         RetrievalResult(
             text=(
                 "1. Go to Settings > Payments > Direct Deposit\n"
-                "2. You'll see your NovaPay routing number and account number\n"
+                "2. You'll see your Nova routing number and account number\n"
                 "3. Share these details with your employer's payroll department"
             ),
             source="feature-direct-deposit.md",

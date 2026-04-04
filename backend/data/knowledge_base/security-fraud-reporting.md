@@ -2,7 +2,7 @@
 
 ## How to Report Fraud
 
-If you believe your NovaPay account has been compromised or you see unauthorized transactions:
+If you believe your Nova account has been compromised or you see unauthorized transactions:
 
 **Step 1: Freeze your card immediately**
 Go to Cards > select the affected card > Freeze Card. This prevents any further unauthorized transactions.
@@ -16,7 +16,7 @@ For each unauthorized transaction:
 5. Submit the report
 
 **Step 3: Contact support**
-Chat with Nova or call 1-800-NOVAPAY (available 24/7 for fraud reports). Our fraud team will:
+Chat with Nova or call 1-800-NOVA (available 24/7 for fraud reports). Our fraud team will:
 - Review your account for additional unauthorized activity
 - Issue a new card with a new number
 - Open a fraud investigation
@@ -31,7 +31,7 @@ Chat with Nova or call 1-800-NOVAPAY (available 24/7 for fraud reports). Our fra
 - **Fraud confirmed:** The provisional credit becomes permanent. A police report may be filed on your behalf.
 - **Not fraud:** The provisional credit is reversed. You can appeal within 10 business days.
 
-## What NovaPay Needs From You
+## What Nova Needs From You
 
 - A description of the unauthorized transactions
 - When you first noticed the unauthorized activity

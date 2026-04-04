@@ -32,7 +32,7 @@ export function Layout({ children }: LayoutProps) {
           >
             <Menu className="size-5" />
           </Button>
-          <span className="font-heading text-lg font-bold text-foreground">NovaPay</span>
+          <span className="font-heading text-lg font-bold text-foreground">Nova</span>
         </header>
 
         <main className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">

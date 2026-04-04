@@ -2,7 +2,7 @@
 
 ## Why Upgrade?
 
-The NovaPay Premium account is designed for freelancers, small business owners, and power users who need higher limits, better rewards, and priority support.
+The Nova Premium account is designed for freelancers, small business owners, and power users who need higher limits, better rewards, and priority support.
 
 **Key benefits of upgrading:**
 - 5x higher daily transfer limit ($25,000 vs $5,000)
@@ -25,7 +25,7 @@ Your upgrade takes effect immediately. Your first month is prorated based on the
 
 ## Free Trial
 
-New NovaPay users are eligible for a 30-day free trial of Premium. If you don't cancel before the trial ends, you will be charged $9.99/month going forward.
+New Nova users are eligible for a 30-day free trial of Premium. If you don't cancel before the trial ends, you will be charged $9.99/month going forward.
 
 ## Downgrading Back to Standard
 

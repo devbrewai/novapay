@@ -2,7 +2,7 @@
 
 ## Identity Verification (KYC)
 
-NovaPay is required by federal law to verify the identity of all account holders. This process is known as Know Your Customer (KYC) and happens when you first open your account.
+Nova is required by federal law to verify the identity of all account holders. This process is known as Know Your Customer (KYC) and happens when you first open your account.
 
 ## What You Need
 

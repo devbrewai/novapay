@@ -1,4 +1,4 @@
-# NovaPay
+# Nova
 
 AI-powered customer support agent embedded in a neobank dashboard. Built by [Devbrew](https://devbrew.ai).
 
@@ -17,7 +17,7 @@ AI-powered customer support agent embedded in a neobank dashboard. Built by [Dev
 
 ```
 React Frontend
-├── NovaPay Dashboard (sidebar, account summary, transactions)
+├── Nova Dashboard (sidebar, account summary, transactions)
 └── Chat Widget ("Ask Nova" — slide-out side panel)
         │ SSE
 FastAPI Backend

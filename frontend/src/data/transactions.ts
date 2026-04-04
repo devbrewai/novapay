@@ -13,7 +13,7 @@ export const mockTransactions: Transaction[] = [
   {
     id: "txn_002",
     date: "2026-03-19",
-    merchant: "NovaPay Transfer",
+    merchant: "Nova Transfer",
     category: "transfer",
     amount: -500.0,
     status: "completed",
@@ -220,7 +220,7 @@ export const mockTransactions: Transaction[] = [
   {
     id: "txn_025",
     date: "2026-03-02",
-    merchant: "NovaPay Transfer",
+    merchant: "Nova Transfer",
     category: "transfer",
     amount: -300.0,
     status: "completed",
@@ -274,7 +274,7 @@ export const mockTransactions: Transaction[] = [
   {
     id: "txn_031",
     date: "2026-02-24",
-    merchant: "NovaPay Interest",
+    merchant: "Nova Interest",
     category: "income",
     amount: 12.84,
     status: "completed",
@@ -346,7 +346,7 @@ export const mockTransactions: Transaction[] = [
   {
     id: "txn_039",
     date: "2026-02-08",
-    merchant: "NovaPay Cashback",
+    merchant: "Nova Cashback",
     category: "income",
     amount: 34.52,
     status: "completed",

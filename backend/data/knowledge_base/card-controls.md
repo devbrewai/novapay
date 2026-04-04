@@ -2,7 +2,7 @@
 
 ## Overview
 
-NovaPay gives you full control over how your debit cards are used. Access card controls at Cards > select a card > Card Controls.
+Nova gives you full control over how your debit cards are used. Access card controls at Cards > select a card > Card Controls.
 
 ## Freeze and Unfreeze
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-NovaPay Bill Pay lets you pay bills directly from your account to thousands of billers across the United States. Pay utilities, rent, credit cards, insurance, and more without leaving the NovaPay app.
+Nova Bill Pay lets you pay bills directly from your account to thousands of billers across the United States. Pay utilities, rent, credit cards, insurance, and more without leaving the Nova app.
 
 ## Setting Up Bill Pay
 
@@ -21,7 +21,7 @@ NovaPay Bill Pay lets you pay bills directly from your account to thousands of b
 ## Payment Methods
 
 - **Electronic payment (most billers):** Processed in 1-2 business days. Free.
-- **Paper check (when electronic is not available):** NovaPay mails a physical check on your behalf. Allow 5-7 business days. Free.
+- **Paper check (when electronic is not available):** Nova mails a physical check on your behalf. Allow 5-7 business days. Free.
 
 ## Scheduled and Recurring Payments
 
@@ -43,4 +43,4 @@ Cancel a scheduled payment before it's processed: Pay Bills > Scheduled > select
 
 ## Supported Billers
 
-NovaPay supports thousands of billers including major utilities, telecoms, insurance companies, credit card issuers, government agencies, and more. If your biller is not listed, you can pay via paper check using their mailing address.
+Nova supports thousands of billers including major utilities, telecoms, insurance companies, credit card issuers, government agencies, and more. If your biller is not listed, you can pay via paper check using their mailing address.

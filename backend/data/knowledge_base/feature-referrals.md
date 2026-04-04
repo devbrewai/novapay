@@ -2,17 +2,17 @@
 
 ## How It Works
 
-Earn cash rewards by referring friends and family to NovaPay. When your referral opens an account and meets the qualifying criteria, both you and your referral receive a bonus.
+Earn cash rewards by referring friends and family to Nova. When your referral opens an account and meets the qualifying criteria, both you and your referral receive a bonus.
 
 ## Current Offer
 
-- **You get:** $25 credited to your NovaPay account
-- **Your friend gets:** $25 credited to their new NovaPay account
+- **You get:** $25 credited to your Nova account
+- **Your friend gets:** $25 credited to their new Nova account
 
 ## Qualifying Criteria
 
 Your referral must:
-1. Be a new NovaPay customer (never had a NovaPay account before)
+1. Be a new Nova customer (never had a Nova account before)
 2. Open an account using your unique referral link or code
 3. Receive a qualifying direct deposit of $200 or more within 45 days of account opening
 
@@ -38,4 +38,4 @@ View the status of all your referrals at Settings > Referrals > My Referrals:
 
 ## Bonus Payout
 
-Referral bonuses are credited within 3 business days of your referral meeting the qualifying criteria. The bonus appears as "NovaPay Referral Bonus" in your transaction history.
+Referral bonuses are credited within 3 business days of your referral meeting the qualifying criteria. The bonus appears as "Nova Referral Bonus" in your transaction history.

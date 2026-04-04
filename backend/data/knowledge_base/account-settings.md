@@ -2,7 +2,7 @@
 
 ## Accessing Your Settings
 
-Open the NovaPay app and tap the gear icon in the bottom navigation bar, or go to Settings from the sidebar menu on desktop.
+Open the Nova app and tap the gear icon in the bottom navigation bar, or go to Settings from the sidebar menu on desktop.
 
 ## Personal Information
 

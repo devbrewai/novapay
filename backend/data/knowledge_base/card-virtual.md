@@ -2,7 +2,7 @@
 
 ## Overview
 
-Every NovaPay account comes with a virtual debit card that's ready to use immediately after account activation. Virtual cards work for online purchases, in-app payments, and contactless payments via Apple Pay or Google Pay.
+Every Nova account comes with a virtual debit card that's ready to use immediately after account activation. Virtual cards work for online purchases, in-app payments, and contactless payments via Apple Pay or Google Pay.
 
 ## Card Details
 

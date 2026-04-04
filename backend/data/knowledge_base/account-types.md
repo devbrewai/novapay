@@ -1,4 +1,4 @@
-# NovaPay Account Types
+# Nova Account Types
 
 ## Standard Account
 
@@ -9,7 +9,7 @@ The Standard account is free to open and maintain. There is no monthly fee and n
 - Physical debit card (free, standard shipping in 7-10 business days)
 - Up to $5,000 daily transfer limit
 - Up to $10,000 monthly transfer limit
-- Free domestic transfers between NovaPay accounts
+- Free domestic transfers between Nova accounts
 - 0.5% APY on balances up to $10,000
 - Basic spending insights and transaction categorization
 - Access to bill pay and direct deposit

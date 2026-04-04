@@ -2,11 +2,11 @@
 
 ## Overview
 
-NovaPay joint accounts allow two people to share a single account with equal access to funds, cards, and features. Joint accounts are ideal for couples, roommates, or business partners who need to manage shared expenses.
+Nova joint accounts allow two people to share a single account with equal access to funds, cards, and features. Joint accounts are ideal for couples, roommates, or business partners who need to manage shared expenses.
 
 ## How to Open a Joint Account
 
-1. One person must have an existing NovaPay account in good standing
+1. One person must have an existing Nova account in good standing
 2. Go to Settings > Account > Add Joint Account Holder
 3. Enter the second person's email address — they will receive an invitation
 4. The second person must complete identity verification (same KYC process as opening a new account)
@@ -33,4 +33,4 @@ Either holder can request removal of the other holder by contacting support. The
 
 - Both holders are equally responsible for any negative balance or overdraft
 - Either holder can close the joint account (with the 14-day cooling-off period)
-- NovaPay does not mediate disputes between joint account holders
+- Nova does not mediate disputes between joint account holders

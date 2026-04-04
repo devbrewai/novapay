@@ -2,7 +2,7 @@
 
 ## How Cashback Works
 
-NovaPay offers cashback rewards on purchases made with your NovaPay debit card (physical or virtual). Cashback is calculated as a percentage of the purchase amount and credited to your account monthly.
+Nova offers cashback rewards on purchases made with your Nova debit card (physical or virtual). Cashback is calculated as a percentage of the purchase amount and credited to your account monthly.
 
 ## Cashback Rates
 
@@ -21,7 +21,7 @@ NovaPay offers cashback rewards on purchases made with your NovaPay debit card (
 
 - Cashback is calculated daily based on your completed transactions
 - Cashback is credited to your account on the first business day of each month
-- The credit appears as "NovaPay Cashback" in your transaction history
+- The credit appears as "Nova Cashback" in your transaction history
 - Monthly cashback summary available at Home > Cashback (or Transactions > Filter > Cashback)
 
 ## Eligible Transactions
@@ -34,7 +34,7 @@ Cashback is earned on:
 
 Cashback is NOT earned on:
 - ATM withdrawals
-- Peer-to-peer transfers (NovaPay to NovaPay, Venmo, Zelle, etc.)
+- Peer-to-peer transfers (Nova to Nova, Venmo, Zelle, etc.)
 - Wire transfers
 - Money orders or cashier's checks
 - Returned purchases (cashback is reversed when a refund is processed)
@@ -49,4 +49,4 @@ View your complete cashback history: Transactions > Filter > Cashback. See:
 
 ## Tax Reporting
 
-Cashback rewards from NovaPay are not considered taxable income by the IRS, as they are classified as a purchase rebate rather than income.
+Cashback rewards from Nova are not considered taxable income by the IRS, as they are classified as a purchase rebate rather than income.

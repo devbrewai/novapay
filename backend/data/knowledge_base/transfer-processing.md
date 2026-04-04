@@ -1,8 +1,8 @@
 # Transfer Processing Times
 
-## Internal Transfers (NovaPay to NovaPay)
+## Internal Transfers (Nova to Nova)
 
-Internal transfers between NovaPay accounts are **instant**. The recipient sees the funds immediately, 24/7, including weekends and holidays.
+Internal transfers between Nova accounts are **instant**. The recipient sees the funds immediately, 24/7, including weekends and holidays.
 
 ## Domestic ACH Transfers
 
@@ -12,7 +12,7 @@ Internal transfers between NovaPay accounts are **instant**. The recipient sees 
 
 **Receiving from an external bank:**
 - Standard: 1-3 business days
-- Direct deposit: Up to 2 days early with NovaPay Early Access (available for both Standard and Premium accounts)
+- Direct deposit: Up to 2 days early with Nova Early Access (available for both Standard and Premium accounts)
 
 ## Wire Transfers
 
@@ -28,7 +28,7 @@ Internal transfers between NovaPay accounts are **instant**. The recipient sees 
 - **Weekends and holidays:** Banks do not process ACH or wire transfers on weekends or federal holidays. Transfers initiated on Friday evening will typically process on Monday.
 - **First-time recipient:** The first transfer to a new external account may take an additional 1-2 business days for security verification.
 - **Large amounts:** Transfers exceeding $10,000 may undergo additional compliance review, adding 1 business day.
-- **Bank holds:** The receiving bank may place a hold on incoming funds. This is outside NovaPay's control.
+- **Bank holds:** The receiving bank may place a hold on incoming funds. This is outside Nova's control.
 
 ## Tracking Your Transfer
 

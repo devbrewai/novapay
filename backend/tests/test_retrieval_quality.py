@@ -50,7 +50,7 @@ def openai_client() -> OpenAI:
 
 @pytest.fixture(scope="module")
 def collection(openai_client: OpenAI) -> Collection:
-    coll = get_collection("novapay_kb_test")
+    coll = get_collection("nova_kb_test")
     if coll.count() == 0:
         ingest(openai_client, coll)
     return coll

@@ -2,7 +2,7 @@
 
 ## Setting Up Recurring Payments
 
-NovaPay supports recurring payments for bills, subscriptions, and scheduled transfers.
+Nova supports recurring payments for bills, subscriptions, and scheduled transfers.
 
 **To set up a recurring payment:**
 1. Go to Pay Bills or Send Money
@@ -24,7 +24,7 @@ For each recurring payment, you can:
 
 ## Subscription Detection
 
-NovaPay automatically detects recurring charges from merchants (like Netflix, Spotify, gym memberships, etc.) and groups them under Transactions > Subscriptions. This helps you track all your recurring expenses in one place.
+Nova automatically detects recurring charges from merchants (like Netflix, Spotify, gym memberships, etc.) and groups them under Transactions > Subscriptions. This helps you track all your recurring expenses in one place.
 
 **Subscription insights include:**
 - Total monthly spend on subscriptions
@@ -36,9 +36,9 @@ NovaPay automatically detects recurring charges from merchants (like Netflix, Sp
 
 If a recurring payment fails (insufficient funds, expired card, etc.):
 - You'll receive a push notification and email alert
-- NovaPay will automatically retry the payment once the next business day
+- Nova will automatically retry the payment once the next business day
 - If the retry also fails, the recurring payment is paused and you'll be notified
-- No late fees are charged by NovaPay (though the payee may charge their own late fees)
+- No late fees are charged by Nova (though the payee may charge their own late fees)
 
 ## Limits
 

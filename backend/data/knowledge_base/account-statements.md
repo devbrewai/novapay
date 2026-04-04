@@ -2,7 +2,7 @@
 
 ## Monthly Statements
 
-NovaPay generates a monthly statement on the first business day of each month, covering all activity from the previous calendar month.
+Nova generates a monthly statement on the first business day of each month, covering all activity from the previous calendar month.
 
 **What's included in your statement:**
 - Opening and closing balance
@@ -24,7 +24,7 @@ NovaPay generates a monthly statement on the first business day of each month, c
 
 ## Tax Documents
 
-**1099-INT:** If you earned more than $10 in interest during the calendar year, NovaPay will issue a 1099-INT form by January 31 of the following year. Access it at Settings > Statements > Tax Documents.
+**1099-INT:** If you earned more than $10 in interest during the calendar year, Nova will issue a 1099-INT form by January 31 of the following year. Access it at Settings > Statements > Tax Documents.
 
 **1099-MISC:** If you received more than $600 in referral bonuses or promotional rewards, a 1099-MISC will be issued.
 
@@ -34,4 +34,4 @@ Need transactions for a specific date range? Go to Transactions > Export and sel
 
 ## Statement Retention
 
-NovaPay retains your statements for 7 years, as required by federal regulations. Even if you close your account, you can request copies of past statements by contacting support.
+Nova retains your statements for 7 years, as required by federal regulations. Even if you close your account, you can request copies of past statements by contacting support.

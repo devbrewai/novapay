@@ -20,7 +20,7 @@ export function ChatEmptyState({ onPromptClick }: ChatEmptyStateProps) {
       <div>
         <h3 className="text-lg font-bold text-foreground">Ask Nova anything</h3>
         <p className="mt-1.5 text-sm font-medium text-muted-foreground max-w-[250px] mx-auto">
-          I can help with your NovaPay account, transactions, and more.
+          I can help with your Nova account, transactions, and more.
         </p>
       </div>
       <div className="flex w-full flex-col gap-2.5 mt-4">

@@ -2,7 +2,7 @@
 
 ## What Is 2FA?
 
-Two-factor authentication adds an extra layer of security to your NovaPay account. In addition to your password, you'll need to provide a second form of verification when logging in or performing sensitive actions.
+Two-factor authentication adds an extra layer of security to your Nova account. In addition to your password, you'll need to provide a second form of verification when logging in or performing sensitive actions.
 
 ## Setting Up 2FA
 
@@ -10,7 +10,7 @@ Go to Settings > Security > Two-Factor Authentication.
 
 **Available methods:**
 
-1. **Authenticator app (recommended):** Use an authenticator app like Google Authenticator, Authy, or 1Password. Scan the QR code displayed in the NovaPay app to link your authenticator. You'll enter a 6-digit code from the app each time you log in.
+1. **Authenticator app (recommended):** Use an authenticator app like Google Authenticator, Authy, or 1Password. Scan the QR code displayed in the Nova app to link your authenticator. You'll enter a 6-digit code from the app each time you log in.
 
 2. **SMS verification:** Receive a 6-digit code via text message to your registered phone number. Less secure than an authenticator app but easier to set up.
 
@@ -28,7 +28,7 @@ Go to Settings > Security > Two-Factor Authentication.
 
 ## Backup Codes
 
-When you set up 2FA, NovaPay generates 10 backup codes. Store these in a safe place. Each code can be used once to log in if you lose access to your 2FA method.
+When you set up 2FA, Nova generates 10 backup codes. Store these in a safe place. Each code can be used once to log in if you lose access to your 2FA method.
 
 To view your backup codes: Settings > Security > 2FA > View Backup Codes.
 

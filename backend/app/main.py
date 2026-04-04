@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     yield
 
 
-app = FastAPI(title="NovaPay API", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="Nova API", version="0.1.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

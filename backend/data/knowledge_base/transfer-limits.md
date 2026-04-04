@@ -2,13 +2,13 @@
 
 ## Overview
 
-NovaPay enforces transfer limits to protect your account and comply with federal regulations. Limits vary by account type and transfer method.
+Nova enforces transfer limits to protect your account and comply with federal regulations. Limits vary by account type and transfer method.
 
 ## Standard Account Limits
 
 | Transfer Method | Per Transaction | Daily | Monthly |
 |----------------|-----------------|-------|---------|
-| Internal (NovaPay to NovaPay) | $5,000 | $5,000 | $10,000 |
+| Internal (Nova to Nova) | $5,000 | $5,000 | $10,000 |
 | Domestic ACH | $5,000 | $5,000 | $10,000 |
 | International | $2,500 | $2,500 | $5,000 |
 | Wire transfer | $5,000 | $5,000 | $10,000 |
@@ -17,7 +17,7 @@ NovaPay enforces transfer limits to protect your account and comply with federal
 
 | Transfer Method | Per Transaction | Daily | Monthly |
 |----------------|-----------------|-------|---------|
-| Internal (NovaPay to NovaPay) | $25,000 | $25,000 | $100,000 |
+| Internal (Nova to Nova) | $25,000 | $25,000 | $100,000 |
 | Domestic ACH | $25,000 | $25,000 | $100,000 |
 | International | $10,000 | $10,000 | $50,000 |
 | Wire transfer | $25,000 | $25,000 | $100,000 |

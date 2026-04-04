@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-NovaPay is a Devbrew portfolio demo: an AI support agent ("Nova") embedded in a mock neobank dashboard. It targets seed-to-Series-A fintech founders to showcase Devbrew's ability to ship production-quality conversational AI. The full PRD lives in `demo-1-novapay-prd.md`.
+Nova is a Devbrew portfolio demo: an AI support agent ("Nova") embedded in a mock neobank dashboard. It targets seed-to-Series-A fintech founders to showcase Devbrew's ability to ship production-quality conversational AI. The full PRD lives in `PRD.md`.
 
 ## Tech Stack
 
@@ -20,7 +20,7 @@ NovaPay is a Devbrew portfolio demo: an AI support agent ("Nova") embedded in a 
 
 ```
 React Frontend
-├── Mock NovaPay Dashboard (sidebar nav, account summary, transactions list)
+├── Mock Nova Dashboard (sidebar nav, account summary, transactions list)
 └── Chat Widget (slide-out side panel, "Ask Nova")
         │ SSE
 FastAPI Backend
@@ -40,7 +40,7 @@ FastAPI Backend
 └── GET  /api/health        → status check
 ```
 
-The RAG pipeline ingests ~30-40 knowledge base markdown files from `data/knowledge_base/` on startup: chunk → embed → store in ChromaDB collection "novapay_kb". Per query: embed → search → inject top chunks as context → stream LLM response.
+The RAG pipeline ingests ~30-40 knowledge base markdown files from `data/knowledge_base/` on startup: chunk → embed → store in ChromaDB collection "nova_kb". Per query: embed → search → inject top chunks as context → stream LLM response.
 
 ## Key Design Decisions
 

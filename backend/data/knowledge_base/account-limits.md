@@ -9,7 +9,7 @@ Transfer limits depend on your account type and verification status.
 | Transfer Type | Daily Limit | Monthly Limit |
 |---------------|-------------|---------------|
 | Domestic ACH | $5,000 | $10,000 |
-| Internal (NovaPay to NovaPay) | $5,000 | $10,000 |
+| Internal (Nova to Nova) | $5,000 | $10,000 |
 | International | $2,500 | $5,000 |
 | Wire transfer | $5,000 | $10,000 |
 
@@ -18,7 +18,7 @@ Transfer limits depend on your account type and verification status.
 | Transfer Type | Daily Limit | Monthly Limit |
 |---------------|-------------|---------------|
 | Domestic ACH | $25,000 | $100,000 |
-| Internal (NovaPay to NovaPay) | $25,000 | $100,000 |
+| Internal (Nova to Nova) | $25,000 | $100,000 |
 | International | $10,000 | $50,000 |
 | Wire transfer | $25,000 | $100,000 |
 

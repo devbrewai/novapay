@@ -20,13 +20,13 @@ You should dispute a transaction if:
 6. Upload any supporting documents (receipts, cancellation confirmations, screenshots)
 7. Submit your dispute
 
-You can also start a dispute by chatting with Nova (our AI support assistant) or calling 1-800-NOVAPAY.
+You can also start a dispute by chatting with Nova (our AI support assistant) or calling 1-800-NOVA.
 
 ## What Happens After You File
 
 **Within 24 hours:** Your dispute is assigned to a specialist. You'll receive an email confirmation with your dispute case number.
 
-**Within 10 business days:** NovaPay investigates the charge by contacting the merchant's bank. For disputes under $500, a provisional credit may be issued to your account while the investigation is in progress.
+**Within 10 business days:** Nova investigates the charge by contacting the merchant's bank. For disputes under $500, a provisional credit may be issued to your account while the investigation is in progress.
 
 **Within 45 days:** Most disputes are resolved. You'll receive an email with the outcome:
 - **Resolved in your favor:** The provisional credit becomes permanent, or a credit is issued if one wasn't already.

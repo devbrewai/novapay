@@ -1,7 +1,7 @@
 [project]
-name = "novapay-backend"
+name = "nova-backend"
 version = "0.1.0"
-description = "NovaPay AI support agent backend"
+description = "Nova AI support agent backend"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115.0",

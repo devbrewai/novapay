@@ -36,14 +36,14 @@ def send_escalation_email(reason: str, user_name: str = "Alex Rivera") -> bool:
         {
             "from": (f"{settings.agent_from_name} <{settings.escalation_from_email}>"),
             "to": [settings.escalation_to_email],
-            "subject": f"NovaPay Escalation: {user_name}",
+            "subject": f"Nova Escalation: {user_name}",
             "html": (
                 f"<h2>Escalation Request</h2>"
                 f"<p><strong>Customer:</strong> {user_name}</p>"
                 f"<p><strong>Reason:</strong> {reason}</p>"
                 f"<hr>"
                 f"<p><em>This email was sent by Nova, "
-                f"NovaPay's AI support assistant.</em></p>"
+                f"the AI support assistant.</em></p>"
             ),
         }
     )

@@ -19,7 +19,7 @@ def test_split_into_paragraphs() -> None:
 
 def test_chunk_paragraphs() -> None:
     paragraphs = [
-        "NovaPay offers instant internal transfers between accounts with no fees",
+        "Nova offers instant internal transfers between accounts with no fees",
         "Premium account holders receive early direct deposit up to two days faster",
         "All transactions are automatically categorized based on merchant information",
         "Physical cards can be ordered for free from the Cards section of the app",
@@ -32,7 +32,7 @@ def test_chunk_paragraphs() -> None:
 def test_chunk_document() -> None:
     result = chunk_document(
         "test-doc",
-        "NovaPay offers instant internal transfers between accounts with no fees",
+        "Nova offers instant internal transfers between accounts with no fees",
         "accounts.md",
         "accounts",
         400,

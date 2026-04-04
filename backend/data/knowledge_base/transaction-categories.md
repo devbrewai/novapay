@@ -2,7 +2,7 @@
 
 ## Automatic Categorization
 
-NovaPay automatically categorizes your transactions based on the merchant. Categories are assigned when the transaction is processed and appear in your transaction history.
+Nova automatically categorizes your transactions based on the merchant. Categories are assigned when the transaction is processed and appear in your transaction history.
 
 **Default categories:**
 - **Food & Dining** — Restaurants, groceries, coffee shops, food delivery
@@ -11,7 +11,7 @@ NovaPay automatically categorizes your transactions based on the merchant. Categ
 - **Entertainment** — Streaming services, movie theaters, gaming, concerts
 - **Bills & Utilities** — Rent, electricity, internet, phone, insurance
 - **Income** — Salary, freelance payments, refunds, cashback
-- **Transfers** — NovaPay internal transfers, ACH transfers, wire transfers
+- **Transfers** — Nova internal transfers, ACH transfers, wire transfers
 - **Health & Wellness** — Pharmacy, doctor visits, gym memberships, health insurance
 - **Travel** — Airlines, hotels, car rentals, travel agencies
 - **Subscriptions** — Monthly/annual recurring charges (auto-detected)
@@ -24,7 +24,7 @@ If a transaction is miscategorized, you can change it:
 3. Select the correct category from the list
 4. The change applies only to this transaction
 
-NovaPay learns from your corrections. If you recategorize a merchant's transactions multiple times, future transactions from that merchant will use your preferred category.
+Nova learns from your corrections. If you recategorize a merchant's transactions multiple times, future transactions from that merchant will use your preferred category.
 
 ## Spending Insights
 

@@ -2,11 +2,11 @@
 
 ## Supported Countries
 
-NovaPay supports international transfers to over 50 countries, including the United Kingdom, Canada, Mexico, Germany, France, Japan, Australia, India, the Philippines, Nigeria, and Brazil. For a full list of supported countries, go to Send Money > International > Supported Countries.
+Nova supports international transfers to over 50 countries, including the United Kingdom, Canada, Mexico, Germany, France, Japan, Australia, India, the Philippines, Nigeria, and Brazil. For a full list of supported countries, go to Send Money > International > Supported Countries.
 
 ## How to Send an International Transfer
 
-1. Open the NovaPay app and tap "Send Money"
+1. Open the Nova app and tap "Send Money"
 2. Select "International Transfer"
 3. Enter the recipient's details:
    - Full legal name (as it appears on their bank account)
@@ -25,7 +25,7 @@ NovaPay supports international transfers to over 50 countries, including the Uni
 
 ## Exchange Rates
 
-NovaPay uses the mid-market exchange rate (the rate you see on Google or XE.com) plus a 0.5% markup. The exchange rate is locked for 30 seconds after it's displayed, giving you time to review and confirm.
+Nova uses the mid-market exchange rate (the rate you see on Google or XE.com) plus a 0.5% markup. The exchange rate is locked for 30 seconds after it's displayed, giving you time to review and confirm.
 
 ## Transfer Limits
 

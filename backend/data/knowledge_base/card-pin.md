@@ -13,7 +13,7 @@ To change your PIN at any time:
 4. Confirm your new PIN
 5. Your PIN is updated immediately
 
-You can also change your PIN at any NovaPay-supported ATM.
+You can also change your PIN at any Nova-supported ATM.
 
 ## Forgot Your PIN?
 
@@ -25,7 +25,7 @@ If you've forgotten your PIN:
 
 ## PIN Security Tips
 
-- Never share your PIN with anyone, including NovaPay support (we will never ask for it)
+- Never share your PIN with anyone, including Nova support (we will never ask for it)
 - Don't use easily guessable numbers like 1234, 0000, or your birth year
 - Use a different PIN than your other bank cards
 - Cover the keypad when entering your PIN at ATMs or point-of-sale terminals
@@ -36,4 +36,4 @@ For security, your card is temporarily locked after 3 consecutive incorrect PIN 
 
 ## ATM Usage
 
-Your NovaPay PIN works at any Visa-compatible ATM. Free withdrawals at 55,000+ Allpoint ATMs nationwide. Out-of-network ATM fee: $2.50 (Standard) or free up to 5/month (Premium). The ATM operator may charge an additional fee.
+Your Nova PIN works at any Visa-compatible ATM. Free withdrawals at 55,000+ Allpoint ATMs nationwide. Out-of-network ATM fee: $2.50 (Standard) or free up to 5/month (Premium). The ATM operator may charge an additional fee.

@@ -2,7 +2,7 @@
 
 ## Login Methods
 
-NovaPay supports multiple ways to log into your account:
+Nova supports multiple ways to log into your account:
 
 **Email and password:** Enter your registered email address and password on the login screen.
 
@@ -12,7 +12,7 @@ NovaPay supports multiple ways to log into your account:
 
 ## Trusted Devices
 
-When you log in from a new device, NovaPay will ask you to verify via 2FA. After verification, you can choose to "Trust this device" so you won't need 2FA for future logins from that device.
+When you log in from a new device, Nova will ask you to verify via 2FA. After verification, you can choose to "Trust this device" so you won't need 2FA for future logins from that device.
 
 View and manage trusted devices: Settings > Security > Trusted Devices. You can remove any device at any time, which will require 2FA on the next login from that device.
 
@@ -33,7 +33,7 @@ If you believe someone is trying to access your account, change your password im
 
 ## Session Timeout
 
-For security, NovaPay sessions expire after:
+For security, Nova sessions expire after:
 - **Mobile app:** 30 days of inactivity (biometric re-authentication required)
 - **Web browser:** 24 hours of inactivity
 - **After password change:** All sessions are ended immediately

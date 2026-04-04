@@ -2,25 +2,25 @@
 
 ## Apple Pay
 
-Add your NovaPay card to Apple Pay for contactless payments with your iPhone, Apple Watch, iPad, or Mac.
+Add your Nova card to Apple Pay for contactless payments with your iPhone, Apple Watch, iPad, or Mac.
 
 **Setup:**
 1. Open the Apple Wallet app
 2. Tap the "+" button
 3. Select "Debit or Credit Card"
-4. Scan your NovaPay card or enter the details manually
-5. Verify with NovaPay (you may receive a verification code via SMS or push notification)
+4. Scan your Nova card or enter the details manually
+5. Verify with Nova (you may receive a verification code via SMS or push notification)
 6. Your card is ready to use with Apple Pay
 
 ## Google Pay
 
-Add your NovaPay card to Google Pay for contactless payments on Android devices.
+Add your Nova card to Google Pay for contactless payments on Android devices.
 
 **Setup:**
 1. Open the Google Pay app
 2. Tap "Add a payment method"
-3. Scan your NovaPay card or enter the details manually
-4. Verify with NovaPay
+3. Scan your Nova card or enter the details manually
+4. Verify with Nova
 5. Your card is ready to use
 
 ## How to Pay Contactless

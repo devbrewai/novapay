@@ -51,7 +51,7 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
           <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
             <span className="font-heading text-sm font-bold">N</span>
           </div>
-          <span className="font-heading text-xl font-bold tracking-tight text-foreground">NovaPay</span>
+          <span className="font-heading text-xl font-bold tracking-tight text-foreground">Nova</span>
         </div>
 
         <nav className="flex-1 space-y-1.5 px-4 py-6">

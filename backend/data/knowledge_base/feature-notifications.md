@@ -2,7 +2,7 @@
 
 ## Overview
 
-NovaPay sends notifications to keep you informed about your account activity, security events, and product updates. Manage your notification preferences at Settings > Notifications.
+Nova sends notifications to keep you informed about your account activity, security events, and product updates. Manage your notification preferences at Settings > Notifications.
 
 ## Notification Types
 

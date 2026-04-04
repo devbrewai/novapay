@@ -1,8 +1,8 @@
-# Closing Your NovaPay Account
+# Closing Your Nova Account
 
 ## Before You Close
 
-Before closing your NovaPay account, please ensure the following:
+Before closing your Nova account, please ensure the following:
 
 - Your account balance is $0, or you have a linked external bank account to transfer remaining funds
 - All pending transactions have been completed or cancelled
@@ -15,7 +15,7 @@ Account closures require verification from our team for security purposes. You c
 
 **To close your account:**
 
-1. Contact NovaPay support through the chat widget or call 1-800-NOVAPAY
+1. Contact Nova support through the chat widget or call 1-800-NOVA
 2. Verify your identity (you'll be asked security questions or to confirm via 2FA)
 3. A support specialist will guide you through the closure process
 4. If you have a remaining balance, choose where to transfer it:
@@ -36,4 +36,4 @@ After requesting closure, there is a 14-day cooling-off period during which you 
 
 ## Reopening an Account
 
-If your account has been closed, you may open a new NovaPay account at any time. However, your previous account number, transaction history, and settings cannot be restored.
+If your account has been closed, you may open a new Nova account at any time. However, your previous account number, transaction history, and settings cannot be restored.

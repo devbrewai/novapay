@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: novapay-api
+    name: nova-api
     runtime: docker
     rootDir: backend
     plan: free

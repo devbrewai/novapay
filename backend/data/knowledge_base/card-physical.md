@@ -2,7 +2,7 @@
 
 ## Ordering Your Card
 
-Every NovaPay account is eligible for a free physical debit card.
+Every Nova account is eligible for a free physical debit card.
 
 **To order your card:**
 1. Go to Cards > Order Physical Card
@@ -14,7 +14,7 @@ Every NovaPay account is eligible for a free physical debit card.
 ## Activating Your Card
 
 When your card arrives:
-1. Open the NovaPay app
+1. Open the Nova app
 2. Go to Cards > Activate Card
 3. Enter the last 4 digits of your card number
 4. Set your 4-digit PIN
@@ -30,7 +30,7 @@ When your card arrives:
 
 ## Card Design
 
-NovaPay cards feature a sleek, minimalist design with your name embossed on the front. The card number is printed on the back for added security.
+Nova cards feature a sleek, minimalist design with your name embossed on the front. The card number is printed on the back for added security.
 
 ## Card Expiration
 

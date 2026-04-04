@@ -4,7 +4,7 @@ from app.config import settings
 from app.types import Chunk
 
 
-def get_collection(collection_name: str = "novapay_kb") -> chromadb.Collection:
+def get_collection(collection_name: str = "nova_kb") -> chromadb.Collection:
     """Initialize Chromadb client and get or create a collection."""
     client = chromadb.PersistentClient(path=settings.chroma_persist_dir)
     collection = client.get_or_create_collection(name=collection_name)

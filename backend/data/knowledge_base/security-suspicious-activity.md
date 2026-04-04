@@ -1,12 +1,12 @@
 # Suspicious Activity
 
-## How NovaPay Monitors Your Account
+## How Nova Monitors Your Account
 
-NovaPay uses advanced fraud detection to monitor your account 24/7. Our system analyzes transaction patterns, locations, merchant types, and amounts to identify potentially fraudulent activity.
+Nova uses advanced fraud detection to monitor your account 24/7. Our system analyzes transaction patterns, locations, merchant types, and amounts to identify potentially fraudulent activity.
 
 ## Types of Suspicious Activity
 
-NovaPay may flag the following:
+Nova may flag the following:
 - Transactions in locations you've never been to
 - Multiple high-value transactions in a short time
 - Purchases at high-risk merchant categories
@@ -29,7 +29,7 @@ If you see transactions you don't recognize:
 2. **Report the unauthorized transaction:** Tap the transaction > "Report as Unauthorized"
 3. **Change your password:** Settings > Security > Change Password
 4. **Check your 2FA settings:** Ensure no unauthorized devices have been added
-5. **Contact support:** Chat with Nova or call 1-800-NOVAPAY for immediate assistance
+5. **Contact support:** Chat with Nova or call 1-800-NOVA for immediate assistance
 
 ## False Positives
 
@@ -42,4 +42,4 @@ If your transaction is declined due to fraud detection, simply verify it through
 
 ## Fraud Protection Guarantee
 
-NovaPay's fraud protection covers 100% of unauthorized transactions, provided they are reported within 60 days. You will never be held liable for transactions you didn't authorize.
+Nova's fraud protection covers 100% of unauthorized transactions, provided they are reported within 60 days. You will never be held liable for transactions you didn't authorize.
