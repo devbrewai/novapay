@@ -31,6 +31,7 @@ export function AccountSummary() {
     (spentThisMonth / monthlyBudget) * 100,
     100,
   );
+  const animatedPercentage = useAnimatedCounter(spendPercentage, 1200);
 
   return (
     <Card className="border-none shadow-sm ring-1 ring-border/50 rounded-3xl">
@@ -87,7 +88,7 @@ export function AccountSummary() {
                 <div className="h-2.5 w-full bg-muted rounded-full overflow-hidden">
                   <div
                     className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${spendPercentage}%` }}
+                    style={{ width: `${animatedPercentage}%` }}
                   />
                 </div>
                 <p className="text-xs text-muted-foreground mt-2 font-medium">
