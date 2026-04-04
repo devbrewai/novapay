@@ -1,4 +1,4 @@
-import { ArrowUpRight, Send, Download, FileText, Plus } from "react-feather";
+import { ArrowUpRight, ArrowDownLeft, DollarSign, Plus } from "react-feather";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,10 +7,10 @@ import { useAnimatedCounter } from "@/hooks/use-animated-counter";
 import { BalanceChart } from "./balance-chart";
 
 const quickActions = [
-  { label: "Add money", icon: Plus, primary: true as const },
-  { label: "Send", icon: Send, primary: false as const },
-  { label: "Request", icon: Download, primary: false as const },
-  { label: "Pay Bills", icon: FileText, primary: false as const },
+  { label: "Send", icon: ArrowUpRight, primary: true as const },
+  { label: "Request", icon: ArrowDownLeft, primary: false as const },
+  { label: "Pay Bills", icon: DollarSign, primary: false as const },
+  { label: "Add money", icon: Plus, primary: false as const },
 ] as const;
 
 function formatCurrency(amount: number): string {
@@ -102,16 +102,44 @@ export function AccountSummary() {
 
           <BalanceChart />
 
-          <div className="flex gap-3 pt-2">
+          {/* Desktop: Pill buttons */}
+          <div className="hidden md:flex gap-4 pt-2">
             {quickActions.map((action) => (
               <Button
                 key={action.label}
-                variant={action.primary ? "default" : "secondary"}
-                className={`rounded-xl px-5 h-12 font-bold ${action.primary ? "shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30" : ""}`}
+                variant={action.primary ? "default" : "ghost"}
+                className={`rounded-lg px-4 h-10 font-semibold gap-2 hover:scale-[1.02] active:scale-[0.97] ${
+                  action.primary
+                    ? ""
+                    : "bg-black/[0.06] text-muted-foreground/70 hover:bg-black/[0.09] hover:text-primary"
+                }`}
               >
-                <action.icon size={18} className="mr-2" />
+                <action.icon size={18} />
                 {action.label}
               </Button>
+            ))}
+          </div>
+
+          {/* Mobile/Tablet: Circular action buttons */}
+          <div className="flex md:hidden justify-start gap-8 pt-2 px-1">
+            {quickActions.map((action) => (
+              <div
+                key={action.label}
+                className="flex flex-col items-center gap-2 group cursor-pointer"
+              >
+                <div
+                  className={`size-14 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-[1.02] active:scale-[0.97] ${
+                    action.primary
+                      ? "bg-primary/10 text-primary hover:bg-primary/15"
+                      : "bg-black/[0.06] text-muted-foreground/70 hover:bg-black/[0.09] hover:text-primary"
+                  }`}
+                >
+                  <action.icon size={22} strokeWidth={2.5} />
+                </div>
+                <span className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">
+                  {action.label}
+                </span>
+              </div>
             ))}
           </div>
         </div>
