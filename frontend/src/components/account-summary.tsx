@@ -70,7 +70,7 @@ export function AccountSummary() {
                     {changeIsPositive ? "+" : ""}
                     {mockAccount.monthlyChange}%
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm font-medium text-muted-foreground">
                     vs last month
                   </span>
                 </div>
