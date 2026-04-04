@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { mockAccount } from "@/data";
 import { useAnimatedCounter } from "@/hooks/use-animated-counter";
+import { BalanceChart } from "./balance-chart";
 
 const quickActions = [
   { label: "Add money", icon: Plus, primary: true as const },
@@ -34,7 +35,7 @@ export function AccountSummary() {
   const animatedPercentage = useAnimatedCounter(spendPercentage, 1200);
 
   return (
-    <Card className="border-none shadow-sm ring-1 ring-border/50 rounded-3xl">
+    <Card className="border-none shadow-sm ring-1 ring-border/50 rounded-3xl py-2">
       <CardContent className="p-8">
         <div className="flex flex-col gap-6">
           <div>
@@ -99,7 +100,9 @@ export function AccountSummary() {
             </div>
           </div>
 
-          <div className="flex gap-3">
+          <BalanceChart />
+
+          <div className="flex gap-3 pt-2">
             {quickActions.map((action) => (
               <Button
                 key={action.label}
