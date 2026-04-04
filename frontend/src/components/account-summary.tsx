@@ -28,7 +28,7 @@ export function AccountSummary() {
   return (
     <Card className="border-none shadow-sm ring-1 ring-border/50">
       <CardContent className="p-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col gap-6">
           <div>
             <div className="flex items-center gap-3 mb-2">
               <div className="flex items-center justify-center size-6 rounded-full bg-muted">
@@ -63,12 +63,12 @@ export function AccountSummary() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-3">
             {quickActions.map((action) => (
               <Button
                 key={action.label}
                 variant={action.primary ? "default" : "secondary"}
-                className={`rounded-full px-5 font-semibold ${action.primary ? 'shadow-md' : ''}`}
+                className={`rounded-full px-5 font-semibold ${action.primary ? "shadow-md" : ""}`}
               >
                 <action.icon size={16} className="mr-2" />
                 {action.label}
