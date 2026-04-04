@@ -64,9 +64,9 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
                   onClose();
                 }}
                 className={cn(
-                  "flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all",
+                  "flex w-full cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold transition-all",
                   isActive
-                    ? "bg-accent/50 text-foreground shadow-sm"
+                    ? "bg-accent/50 text-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
@@ -78,7 +78,7 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
         </nav>
 
         <div className="p-4">
-          <div className="flex items-center gap-3 rounded-xl p-3 hover:bg-muted transition-colors cursor-pointer border border-transparent hover:border-border/50">
+          <div className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors cursor-pointer border border-transparent hover:border-border/50">
             <Avatar className="size-9 ring-1 ring-border/50 shadow-sm">
               <AvatarFallback className="bg-primary/5 text-primary text-xs font-semibold">
                 {initials}
