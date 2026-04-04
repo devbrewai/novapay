@@ -2,6 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Menu } from "react-feather";
 import { Button } from "@/components/ui/button";
 import { Sidebar, type Page } from "@/components/sidebar";
+import { NovaLogo } from "@/components/nova-logo";
 import { ChatTrigger } from "@/components/chat-trigger";
 import { ChatPanel } from "@/components/chat";
 
@@ -30,9 +31,10 @@ export function Layout({ children }: LayoutProps) {
             size="icon"
             onClick={() => setSidebarOpen(true)}
           >
-            <Menu className="size-5" />
+            <Menu className="size-5 text-primary" />
           </Button>
-          <span className="font-heading text-lg font-bold text-foreground">Nova</span>
+          <NovaLogo className="text-primary" />
+          <span className="font-heading text-lg font-bold text-primary">Nova</span>
         </header>
 
         <main className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10">

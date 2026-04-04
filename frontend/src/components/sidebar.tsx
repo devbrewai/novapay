@@ -3,6 +3,7 @@ import { Home, Shuffle, CreditCard, Settings } from "react-feather";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { mockAccount } from "@/data";
+import { NovaLogo } from "@/components/nova-logo";
 
 export type Page = "home" | "transactions" | "cards" | "settings";
 
@@ -48,10 +49,8 @@ export function Sidebar({ activePage, onNavigate, open, onClose }: SidebarProps)
         )}
       >
         <div className="flex h-16 items-center gap-3 px-6">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-            <span className="font-heading text-sm font-bold">N</span>
-          </div>
-          <span className="font-heading text-xl font-bold tracking-tight text-foreground">Nova</span>
+          <NovaLogo className="text-primary" />
+          <span className="font-heading text-xl font-bold tracking-tight text-primary">Nova</span>
         </div>
 
         <nav className="flex-1 space-y-1.5 px-4 py-6">
