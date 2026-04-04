@@ -14,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
   const [activePage, setActivePage] = useState<Page>("home");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   return (
     <div className="flex h-screen bg-background">
@@ -22,6 +23,8 @@ export function Layout({ children }: LayoutProps) {
         onNavigate={setActivePage}
         open={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
+        collapsed={sidebarCollapsed}
+        onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
 
       <div className="flex flex-1 flex-col overflow-hidden">
