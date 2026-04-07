@@ -85,8 +85,6 @@ TOOLS: list[anthropic.types.ToolParam] = [
     },
 ]
 
-MODEL = "claude-sonnet-4-20250514"
-
 
 def get_anthropic_client() -> anthropic.Anthropic:
     """Initialize the Anthropic client with retry and fresh connections."""
@@ -115,7 +113,7 @@ def create_response(
 ) -> anthropic.types.Message:
     """Create a non-streaming response from Claude with tool use."""
     return client.messages.create(
-        model=MODEL,
+        model=settings.anthropic_model,
         max_tokens=1024,
         system=system_prompt,
         messages=messages,
@@ -130,7 +128,7 @@ def stream_response(
 ) -> Iterator[Any]:
     """Stream a response from Claude with tool use support."""
     with client.messages.stream(
-        model=MODEL,
+        model=settings.anthropic_model,
         max_tokens=1024,
         system=system_prompt,
         messages=messages,
