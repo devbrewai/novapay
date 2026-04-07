@@ -86,9 +86,9 @@ All changes must be **atomic** and **methodological**. One logical change per un
 Every change follows this flow:
 
 1. **Code** — make one atomic, focused change
-2. **Lint** — backend: `ruff check . && ruff format --check .` / frontend: `bun run lint`
-3. **Type-check** — backend: `mypy .` / frontend: `bunx tsc --noEmit`
-4. **Test** — backend: `pytest` / frontend: `bun test`
+2. **Lint** — backend: `uv run ruff check . && uv run ruff format --check .` / frontend: `bun run lint`
+3. **Type-check** — backend: `uv run mypy .` / frontend: `bunx tsc --noEmit`
+4. **Test** — backend: `uv run pytest` / frontend: `bun test`
 5. **Commit** — one commit per logical change (see commit conventions below)
 
 Do not skip steps. Do not batch unrelated changes into a single commit. If lint, type-check, or tests fail, fix before committing.

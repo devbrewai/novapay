@@ -128,10 +128,8 @@ Copy `backend/.env.example` to `backend/.env` and fill in `ANTHROPIC_API_KEY` an
 
 ```bash
 cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -e ".[dev]"
-uvicorn app.main:app --reload
+uv sync --extra dev
+uv run uvicorn app.main:app --reload
 ```
 
 ### Frontend
@@ -166,9 +164,9 @@ bun run dev
 
 ```bash
 cd backend
-ruff check . && ruff format --check .   # lint
-mypy .                                   # type-check
-pytest                                   # run the test suite
+uv run ruff check . && uv run ruff format --check .   # lint
+uv run mypy .                                          # type-check
+uv run pytest                                          # run the test suite
 ```
 
 ### Frontend
