@@ -20,7 +20,7 @@ AI-powered customer support agent embedded in a neobank dashboard. Built by [Dev
 | ---------- | ---------------------------------------------------------------- |
 | Frontend   | React 19, TypeScript, Vite, Tailwind CSS, Base UI (shadcn-style) |
 | Backend    | Python 3.11+, FastAPI                                            |
-| LLM        | Claude Sonnet 4 (`claude-sonnet-4-20250514`)                     |
+| LLM        | Claude Sonnet 4.6 (`claude-sonnet-4-6`)                          |
 | Embeddings | OpenAI `text-embedding-3-small`                                  |
 | Vector DB  | ChromaDB                                                         |
 | Streaming  | Server-Sent Events (SSE)                                         |
@@ -172,7 +172,7 @@ bun run dev
 | Variable                | Where    | Description                                                          |
 | ----------------------- | -------- | -------------------------------------------------------------------- |
 | `ANTHROPIC_API_KEY`     | Backend  | Claude API key (required)                                            |
-| `ANTHROPIC_MODEL`       | Backend  | Claude model ID (default: `claude-sonnet-4-20250514`)                |
+| `ANTHROPIC_MODEL`       | Backend  | Claude model ID (default: `claude-sonnet-4-6`)                       |
 | `OPENAI_API_KEY`        | Backend  | OpenAI API key for embeddings (required)                             |
 | `RESEND_API_KEY`        | Backend  | Resend API key for escalation emails (optional)                      |
 | `CHROMA_PERSIST_DIR`    | Backend  | ChromaDB storage path (default: `./chroma_data`)                     |

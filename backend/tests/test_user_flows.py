@@ -19,7 +19,7 @@ def _make_text_response(text: str) -> anthropic.types.Message:
         id="msg_test",
         type="message",
         role="assistant",
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         content=[anthropic.types.TextBlock(type="text", text=text)],
         stop_reason="end_turn",
         usage=anthropic.types.Usage(input_tokens=10, output_tokens=5),
@@ -33,7 +33,7 @@ def _make_tool_use_response(
         id="msg_test",
         type="message",
         role="assistant",
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         content=[
             anthropic.types.ToolUseBlock(
                 type="tool_use",

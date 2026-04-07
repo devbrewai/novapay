@@ -10,7 +10,7 @@ Nova is a Devbrew portfolio demo: an AI support agent ("Nova") embedded in a moc
 
 - **Frontend:** React 19 + TypeScript + Vite + Tailwind CSS + Base UI (shadcn-style components in `src/components/ui/`), Bun as package manager/runtime
 - **Backend:** Python 3.11+ + FastAPI
-- **LLM:** Anthropic Claude Sonnet 4 (`claude-sonnet-4-20250514`) — no fallback model
+- **LLM:** Anthropic Claude Sonnet 4.6 (`claude-sonnet-4-6`) — no fallback model
 - **Embeddings:** OpenAI `text-embedding-3-small`
 - **Vector DB:** ChromaDB (self-hosted)
 - **Streaming:** Server-Sent Events (SSE)

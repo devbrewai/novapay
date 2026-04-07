@@ -7,7 +7,7 @@ _BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
     anthropic_api_key: str = ""
-    anthropic_model: str = "claude-sonnet-4-20250514"
+    anthropic_model: str = "claude-sonnet-4-6"
     openai_api_key: str = ""
     resend_api_key: str = ""
     escalation_to_email: str = "hello@devbrew.ai"
