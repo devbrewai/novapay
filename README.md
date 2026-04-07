@@ -185,6 +185,28 @@ bun run dev
 | `AGENT_FROM_NAME`       | Backend  | Display name for the agent (default: `Nova`)                         |
 | `VITE_API_URL`          | Frontend | Backend URL                                                          |
 
+## Development
+
+### Backend
+
+```bash
+cd backend
+ruff check . && ruff format --check .   # lint
+mypy .                                   # type-check
+pytest                                   # run the test suite
+```
+
+### Frontend
+
+```bash
+cd frontend
+bun run lint                             # lint
+bunx tsc --noEmit                        # type-check
+bun test                                 # run tests
+```
+
+Every change should pass lint, type-check, and tests before commit. See [`CLAUDE.md`](CLAUDE.md) for the full development workflow and commit conventions.
+
 ## License
 
 [MIT](LICENSE)
