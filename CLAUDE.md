@@ -53,13 +53,10 @@ The RAG pipeline ingests the 36 knowledge base markdown files from `backend/data
 - **Responses must stay under 100 words** unless explaining a multi-step process.
 - **Escalation triggers:** account closures, complex disputes, unresolvable after 2 attempts.
 
-## What NOT to Build
-
-User auth, real payments, admin panel, multiple users, DB persistence, notifications, cross-reload chat history, voice support, file uploads.
-
 ## Environment Variables
 
 Backend (defined in `backend/app/config.py`):
+
 - `ANTHROPIC_API_KEY` — Claude API key (required)
 - `OPENAI_API_KEY` — OpenAI API key for embeddings (required)
 - `RESEND_API_KEY` — Resend API key for escalation emails (optional)
