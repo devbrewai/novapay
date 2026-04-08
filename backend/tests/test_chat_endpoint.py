@@ -21,13 +21,9 @@ def _make_text_response(text: str) -> anthropic.types.Message:
 
 
 @patch("app.services.chat_orchestrator.retrieve")
-def test_chat_returns_sse_content_type(
-    mock_retrieve: Mock, client: TestClient
-) -> None:
+def test_chat_returns_sse_content_type(mock_retrieve: Mock, client: TestClient) -> None:
     mock_retrieve.return_value = []
-    app.state.anthropic_client = make_anthropic_client(
-        _make_text_response("Hello!")
-    )
+    app.state.anthropic_client = make_anthropic_client(_make_text_response("Hello!"))
 
     response = client.post(
         "/api/chat",
@@ -60,13 +56,9 @@ def test_chat_streams_events(mock_retrieve: Mock, client: TestClient) -> None:
 
 
 @patch("app.services.chat_orchestrator.retrieve")
-def test_chat_returns_conversation_id(
-    mock_retrieve: Mock, client: TestClient
-) -> None:
+def test_chat_returns_conversation_id(mock_retrieve: Mock, client: TestClient) -> None:
     mock_retrieve.return_value = []
-    app.state.anthropic_client = make_anthropic_client(
-        _make_text_response("Hi!")
-    )
+    app.state.anthropic_client = make_anthropic_client(_make_text_response("Hi!"))
 
     response = client.post(
         "/api/chat",

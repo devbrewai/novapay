@@ -100,5 +100,3 @@ def build_system_prompt(context: str) -> str:
             context="No relevant knowledge base articles found."
         )
     return SYSTEM_PROMPT_TEMPLATE.format(context=context)
-
-

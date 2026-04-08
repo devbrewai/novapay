@@ -57,9 +57,7 @@ def test_orchestrate_text_response(mock_retrieve: Mock) -> None:
 
 @patch("app.services.chat_orchestrator.execute_tool")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_orchestrate_with_tool_use(
-    mock_retrieve: Mock, mock_execute: Mock
-) -> None:
+def test_orchestrate_with_tool_use(mock_retrieve: Mock, mock_execute: Mock) -> None:
     mock_retrieve.return_value = []
     mock_execute.return_value = "Uber | $24.50"
 

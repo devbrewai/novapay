@@ -141,9 +141,7 @@ def test_flow_transaction_lookup_unrecognized_charge(
 
 @patch("app.services.tools.send_escalation_email")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_flow_escalation_account_closure(
-    mock_retrieve: Mock, mock_email: Mock
-) -> None:
+def test_flow_escalation_account_closure(mock_retrieve: Mock, mock_email: Mock) -> None:
     """User wants to close account.
     Agent uses escalate_to_human tool to hand off."""
     mock_retrieve.return_value = [
