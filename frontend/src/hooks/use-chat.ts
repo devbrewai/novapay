@@ -147,11 +147,19 @@ export function useChat() {
     sendMessage(text);
   }, [sendMessage]);
 
+  const resetConversation = useCallback(() => {
+    setMessages([]);
+    setStatus("idle");
+    conversationIdRef.current = null;
+    lastUserTextRef.current = "";
+  }, []);
+
   return {
     messages,
     status,
     conversationId: conversationIdRef.current,
     sendMessage,
     retry,
+    resetConversation,
   };
 }
