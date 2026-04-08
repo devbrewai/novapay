@@ -4,6 +4,9 @@ from unittest.mock import Mock, patch
 import anthropic.types
 from fastapi.testclient import TestClient
 
+from app.main import app
+from tests._anthropic_stream import make_anthropic_client
+
 
 def _make_text_response(text: str) -> anthropic.types.Message:
     return anthropic.types.Message(
@@ -17,13 +20,14 @@ def _make_text_response(text: str) -> anthropic.types.Message:
     )
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
 def test_chat_returns_sse_content_type(
-    mock_retrieve: Mock, mock_create: Mock, client: TestClient
+    mock_retrieve: Mock, client: TestClient
 ) -> None:
     mock_retrieve.return_value = []
-    mock_create.return_value = _make_text_response("Hello!")
+    app.state.anthropic_client = make_anthropic_client(
+        _make_text_response("Hello!")
+    )
 
     response = client.post(
         "/api/chat",
@@ -34,13 +38,12 @@ def test_chat_returns_sse_content_type(
     assert "text/event-stream" in response.headers["content-type"]
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_chat_streams_events(
-    mock_retrieve: Mock, mock_create: Mock, client: TestClient
-) -> None:
+def test_chat_streams_events(mock_retrieve: Mock, client: TestClient) -> None:
     mock_retrieve.return_value = []
-    mock_create.return_value = _make_text_response("Hello Alex!")
+    app.state.anthropic_client = make_anthropic_client(
+        _make_text_response("Hello Alex!")
+    )
 
     response = client.post(
         "/api/chat",
@@ -56,13 +59,14 @@ def test_chat_streams_events(
     assert "done" in event_types
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
 def test_chat_returns_conversation_id(
-    mock_retrieve: Mock, mock_create: Mock, client: TestClient
+    mock_retrieve: Mock, client: TestClient
 ) -> None:
     mock_retrieve.return_value = []
-    mock_create.return_value = _make_text_response("Hi!")
+    app.state.anthropic_client = make_anthropic_client(
+        _make_text_response("Hi!")
+    )
 
     response = client.post(
         "/api/chat",
@@ -77,13 +81,13 @@ def test_chat_returns_conversation_id(
     assert len(conv_event["id"]) > 0
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_chat_reuses_conversation(
-    mock_retrieve: Mock, mock_create: Mock, client: TestClient
-) -> None:
+def test_chat_reuses_conversation(mock_retrieve: Mock, client: TestClient) -> None:
     mock_retrieve.return_value = []
-    mock_create.return_value = _make_text_response("First response")
+    app.state.anthropic_client = make_anthropic_client(
+        _make_text_response("First response"),
+        _make_text_response("Second response"),
+    )
 
     # First request — get conversation_id
     response1 = client.post(
@@ -95,7 +99,6 @@ def test_chat_reuses_conversation(
     conv_id = next(e for e in events1 if e["type"] == "conversation_id")["id"]
 
     # Second request — reuse conversation_id
-    mock_create.return_value = _make_text_response("Second response")
     response2 = client.post(
         "/api/chat",
         json={"message": "follow up", "conversation_id": conv_id},

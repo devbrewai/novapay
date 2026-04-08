@@ -1,7 +1,7 @@
 """End-to-end tests for the four user flows.
 
 Each test exercises the full orchestration pipeline (orchestrate_chat),
-mocking only external API boundaries (retrieve + create_response).
+mocking only external API boundaries (retrieve + the Anthropic stream).
 Real tool execution runs against actual data files.
 """
 
@@ -12,6 +12,7 @@ import anthropic.types
 from app.services.chat_orchestrator import orchestrate_chat
 from app.services.conversation import Conversation
 from app.types import RetrievalResult
+from tests._anthropic_stream import make_anthropic_client
 
 
 def _make_text_response(text: str) -> anthropic.types.Message:
@@ -50,9 +51,8 @@ def _make_tool_use_response(
 # -- Flow 1: Knowledge Base Q&A (international transfer fees) -----------------
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_flow_kb_qa_transfer_fees(mock_retrieve: Mock, mock_create: Mock) -> None:
+def test_flow_kb_qa_transfer_fees(mock_retrieve: Mock) -> None:
     """User asks about international transfer fees.
     Agent retrieves from KB and answers with specific fee info."""
     mock_retrieve.return_value = [
@@ -65,10 +65,12 @@ def test_flow_kb_qa_transfer_fees(mock_retrieve: Mock, mock_create: Mock) -> Non
             distance=0.3,
         )
     ]
-    mock_create.return_value = _make_text_response(
-        "International transfers have a flat 1.5% fee on Standard accounts "
-        "(min $5). Premium accounts get a reduced 1.0% rate. "
-        "Would you like to start a transfer?"
+    client = make_anthropic_client(
+        _make_text_response(
+            "International transfers have a flat 1.5% fee on Standard accounts "
+            "(min $5). Premium accounts get a reduced 1.0% rate. "
+            "Would you like to start a transfer?"
+        )
     )
 
     conv = Conversation()
@@ -76,7 +78,7 @@ def test_flow_kb_qa_transfer_fees(mock_retrieve: Mock, mock_create: Mock) -> Non
         orchestrate_chat(
             "What's the fee for international transfers?",
             conv,
-            Mock(),
+            client,
             Mock(),
             Mock(),
         )
@@ -96,29 +98,28 @@ def test_flow_kb_qa_transfer_fees(mock_retrieve: Mock, mock_create: Mock) -> Non
 # -- Flow 2: Transaction Lookup ($47.99 unrecognized charge) ------------------
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
 def test_flow_transaction_lookup_unrecognized_charge(
-    mock_retrieve: Mock, mock_create: Mock
+    mock_retrieve: Mock,
 ) -> None:
     """User reports unrecognized $47.99 charge.
     Agent uses transaction_lookup tool, finds StreamVault Inc."""
     mock_retrieve.return_value = []
-    mock_create.side_effect = [
+    client = make_anthropic_client(
         _make_tool_use_response("transaction_lookup", {"query": "47.99"}),
         _make_text_response(
             "I found that charge — it's $47.99 from StreamVault Inc on March 16 "
             "for an annual subscription. Does this look familiar, or would you "
             "like to dispute it?"
         ),
-    ]
+    )
 
     conv = Conversation()
     events = list(
         orchestrate_chat(
             "I see a charge for $47.99 that I don't recognize",
             conv,
-            Mock(),
+            client,
             Mock(),
             Mock(),
         )
@@ -139,10 +140,9 @@ def test_flow_transaction_lookup_unrecognized_charge(
 
 
 @patch("app.services.tools.send_escalation_email")
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
 def test_flow_escalation_account_closure(
-    mock_retrieve: Mock, mock_create: Mock, mock_email: Mock
+    mock_retrieve: Mock, mock_email: Mock
 ) -> None:
     """User wants to close account.
     Agent uses escalate_to_human tool to hand off."""
@@ -155,7 +155,7 @@ def test_flow_escalation_account_closure(
     ]
     mock_email.return_value = True
 
-    mock_create.side_effect = [
+    client = make_anthropic_client(
         _make_tool_use_response(
             "escalate_to_human",
             {"reason": "Customer requesting account closure"},
@@ -164,14 +164,14 @@ def test_flow_escalation_account_closure(
             "I've connected you with a specialist who can walk you through "
             "the account closure process. They'll reach out within 24 hours."
         ),
-    ]
+    )
 
     conv = Conversation()
     events = list(
         orchestrate_chat(
             "I want to close my account",
             conv,
-            Mock(),
+            client,
             Mock(),
             Mock(),
         )
@@ -190,9 +190,8 @@ def test_flow_escalation_account_closure(
 # -- Flow 4: Onboarding Help (direct deposit setup) --------------------------
 
 
-@patch("app.services.chat_orchestrator.create_response")
 @patch("app.services.chat_orchestrator.retrieve")
-def test_flow_onboarding_direct_deposit(mock_retrieve: Mock, mock_create: Mock) -> None:
+def test_flow_onboarding_direct_deposit(mock_retrieve: Mock) -> None:
     """User asks how to set up direct deposit.
     Agent retrieves from KB with step-by-step instructions."""
     mock_retrieve.return_value = [
@@ -206,11 +205,13 @@ def test_flow_onboarding_direct_deposit(mock_retrieve: Mock, mock_create: Mock) 
             distance=0.25,
         )
     ]
-    mock_create.return_value = _make_text_response(
-        "Here's how to set up direct deposit:\n"
-        "1. Go to Settings > Payments > Direct Deposit\n"
-        "2. You'll find your routing number and account number\n"
-        "3. Share these with your employer's payroll department"
+    client = make_anthropic_client(
+        _make_text_response(
+            "Here's how to set up direct deposit:\n"
+            "1. Go to Settings > Payments > Direct Deposit\n"
+            "2. You'll find your routing number and account number\n"
+            "3. Share these with your employer's payroll department"
+        )
     )
 
     conv = Conversation()
@@ -218,7 +219,7 @@ def test_flow_onboarding_direct_deposit(mock_retrieve: Mock, mock_create: Mock) 
         orchestrate_chat(
             "How do I set up direct deposit?",
             conv,
-            Mock(),
+            client,
             Mock(),
             Mock(),
         )

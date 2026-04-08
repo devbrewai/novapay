@@ -16,9 +16,10 @@ from anthropic.types import (
 from chromadb import Collection
 from openai import OpenAI
 
+from app.config import settings
 from app.services.context import format_context
 from app.services.conversation import Conversation
-from app.services.llm import build_system_prompt, create_response
+from app.services.llm import TOOLS, build_system_prompt
 from app.services.retrieval import retrieve
 from app.services.tools import execute_tool
 
@@ -59,16 +60,26 @@ def orchestrate_chat(
 
         # 3. LLM call loop (handles tool use rounds)
         for _round in range(MAX_TOOL_ROUNDS):
-            response = create_response(anthropic_client, messages, system_prompt)
+            with anthropic_client.messages.stream(
+                model=settings.anthropic_model,
+                max_tokens=1024,
+                system=system_prompt,
+                messages=messages,
+                tools=TOOLS,
+            ) as stream:
+                for event in stream:
+                    if event.type == "text":
+                        yield {"type": "text_delta", "content": event.text}
 
-            # Collect text and tool use blocks
+                final_message = stream.get_final_message()
+
+            # Collect text and tool use blocks from the assembled message
             text_parts: list[str] = []
             tool_use_blocks: list[ToolUseBlock] = []
 
-            for block in response.content:
+            for block in final_message.content:
                 if block.type == "text":
                     text_parts.append(block.text)
-                    yield {"type": "text_delta", "content": block.text}
                 elif isinstance(block, ToolUseBlock):
                     tool_use_blocks.append(block)
 
@@ -111,7 +122,7 @@ def orchestrate_chat(
 
             # Feed tool results back to LLM
             assistant_content: list[TextBlockParam | ToolUseBlockParam] = []
-            for block in response.content:
+            for block in final_message.content:
                 if block.type == "text":
                     assistant_content.append(
                         TextBlockParam(type="text", text=block.text)
