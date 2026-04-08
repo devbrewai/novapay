@@ -32,10 +32,11 @@ export function ChatPanel({ open, onClose }: ChatPanelProps) {
 
   return (
     <>
-      {/* Backdrop — click to dismiss */}
+      {/* Backdrop — click to dismiss (mobile only; desktop chat is a
+          floating bubble that should not block the dashboard) */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-foreground/5 backdrop-blur-sm transition-all md:bg-transparent md:backdrop-blur-none"
+          className="fixed inset-0 z-40 bg-foreground/5 backdrop-blur-sm transition-all md:hidden"
           onClick={onClose}
         />
       )}
