@@ -19,6 +19,12 @@ def test_build_system_prompt_empty_context() -> None:
     assert "No relevant knowledge base articles found." in prompt
 
 
+def test_system_prompt_forbids_emojis() -> None:
+    prompt = build_system_prompt("")
+
+    assert "emoji" in prompt.lower()
+
+
 def test_tools_have_required_fields() -> None:
     for tool in TOOLS:
         assert "name" in tool
