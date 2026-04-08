@@ -38,6 +38,7 @@ def test_tools_list_contains_expected_tools() -> None:
     assert tool_names == {
         "transaction_lookup",
         "recent_transactions",
+        "spending_summary",
         "account_info",
         "escalate_to_human",
     }

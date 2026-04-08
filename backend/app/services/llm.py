@@ -73,6 +73,20 @@ TOOLS: list[anthropic.types.ToolParam] = [
         },
     },
     {
+        "name": "spending_summary",
+        "description": (
+            "Summarize the user's spending: total amount spent, "
+            "transaction count, and top 3 spending categories. Use "
+            "when the user asks 'how much have I spent', 'summarize "
+            "my spending', or any prompt about spending totals or "
+            "category breakdowns."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {},
+        },
+    },
+    {
         "name": "account_info",
         "description": (
             "Retrieve the current user's account information including "

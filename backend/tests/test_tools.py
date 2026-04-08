@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 import pytest
 
 from app.services.tools import (
@@ -5,8 +8,11 @@ from app.services.tools import (
     escalate_to_human,
     execute_tool,
     recent_transactions,
+    spending_summary,
     transaction_lookup,
 )
+
+_DATA_DIR = Path(__file__).resolve().parent.parent / "app" / "data"
 
 
 def test_transaction_lookup_by_merchant() -> None:
@@ -66,6 +72,38 @@ def test_execute_tool_recent_transactions_with_limit() -> None:
     result = execute_tool("recent_transactions", {"limit": 2})
     lines = [line for line in result.strip().split("\n") if line.startswith("-")]
     assert len(lines) == 2
+
+
+def test_spending_summary_returns_total_and_count() -> None:
+    result = spending_summary()
+    assert "Total spent:" in result
+    assert "$" in result
+    assert "transactions" in result
+
+
+def test_spending_summary_lists_top_categories() -> None:
+    result = spending_summary()
+    assert "Top categories:" in result
+    category_lines = [
+        line for line in result.strip().split("\n") if line.startswith("- ")
+    ]
+    assert len(category_lines) == 3
+
+
+def test_spending_summary_excludes_income() -> None:
+    transactions = json.loads((_DATA_DIR / "transactions.json").read_text())
+    expected_total = sum(abs(t["amount"]) for t in transactions if t["amount"] < 0)
+
+    result = spending_summary()
+    # First line is "Total spent: $X,XXX.XX across N transactions"
+    first_line = result.split("\n")[0]
+    assert f"${expected_total:,.2f}" in first_line
+
+
+def test_execute_tool_spending_summary() -> None:
+    result = execute_tool("spending_summary", {})
+    assert "Total spent:" in result
+    assert "Top categories:" in result
 
 
 def test_account_info_returns_profile() -> None:

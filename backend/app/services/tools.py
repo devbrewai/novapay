@@ -56,6 +56,30 @@ def recent_transactions(limit: int = 5) -> str:
     return "\n".join(lines)
 
 
+def spending_summary() -> str:
+    """Aggregate spending: total, count, and top 3 categories by amount."""
+    transactions = _load_json("transactions.json")
+
+    # Spending = negative-amount transactions only (income excluded)
+    spending = [t for t in transactions if t["amount"] < 0]
+    total = sum(abs(t["amount"]) for t in spending)
+    count = len(spending)
+
+    # Top 3 categories by absolute amount spent
+    by_category: dict[str, float] = {}
+    for t in spending:
+        by_category[t["category"]] = by_category.get(t["category"], 0.0) + abs(
+            t["amount"]
+        )
+    top_three = sorted(by_category.items(), key=lambda kv: kv[1], reverse=True)[:3]
+
+    lines = [f"Total spent: ${total:,.2f} across {count} transactions"]
+    lines.append("Top categories:")
+    for category, amount in top_three:
+        lines.append(f"- {category}: ${amount:,.2f}")
+    return "\n".join(lines)
+
+
 def account_info() -> str:
     """Return the current user's account information."""
     account = _load_json("account.json")
@@ -85,6 +109,8 @@ def execute_tool(name: str, tool_input: dict[str, Any]) -> str:
     if name == "recent_transactions":
         limit = tool_input.get("limit", 5)
         return recent_transactions(limit=int(limit))
+    if name == "spending_summary":
+        return spending_summary()
     if name == "account_info":
         return account_info()
     if name == "escalate_to_human":
