@@ -43,6 +43,32 @@ def _make_tool_use_response(
     )
 
 
+def _make_text_then_tool_use_response(
+    text: str,
+    tool_name: str,
+    tool_input: dict[str, object],
+    tool_id: str = "tool_1",
+) -> anthropic.types.Message:
+    """Create a mock Claude response with a text block followed by a tool use."""
+    return anthropic.types.Message(
+        id="msg_test",
+        type="message",
+        role="assistant",
+        model="claude-sonnet-4-6",
+        content=[
+            anthropic.types.TextBlock(type="text", text=text),
+            anthropic.types.ToolUseBlock(
+                type="tool_use",
+                id=tool_id,
+                name=tool_name,
+                input=tool_input,
+            ),
+        ],
+        stop_reason="tool_use",
+        usage=anthropic.types.Usage(input_tokens=10, output_tokens=5),
+    )
+
+
 @patch("app.services.chat_orchestrator.retrieve")
 def test_orchestrate_text_response(mock_retrieve: Mock) -> None:
     mock_retrieve.return_value = []
@@ -99,6 +125,34 @@ def test_orchestrate_error_yields_error_event(mock_retrieve: Mock) -> None:
     events = list(orchestrate_chat("test", conv, Mock(), Mock(), Mock()))
 
     assert events[0]["type"] == "error"
+
+
+@patch("app.services.chat_orchestrator.execute_tool")
+@patch("app.services.chat_orchestrator.retrieve")
+def test_orchestrate_separates_consecutive_responses_with_paragraph_break(
+    mock_retrieve: Mock, mock_execute: Mock
+) -> None:
+    mock_retrieve.return_value = []
+    mock_execute.return_value = "Premium | $12,847.32"
+
+    pre_text = "I'd be happy to help! Let me pull up your account details right away."
+    post_text = "Your balance is $12,847.32."
+    client = make_anthropic_client(
+        _make_text_then_tool_use_response(pre_text, "account_info", {}),
+        _make_text_response(post_text),
+    )
+
+    conv = Conversation()
+    events = list(
+        orchestrate_chat("I need help with my account", conv, client, Mock(), Mock())
+    )
+
+    joined = "".join(e["content"] for e in events if e["type"] == "text_delta")
+    assert pre_text in joined
+    assert post_text in joined
+    assert "right away.\n\n" in joined, (
+        f"expected paragraph break between segments, got: {joined!r}"
+    )
 
 
 @patch("app.services.chat_orchestrator.retrieve")

@@ -60,7 +60,9 @@ def orchestrate_chat(
         conversation.add_message("user", user_message)
 
         # 3. LLM call loop (handles tool use rounds)
+        pending_separator = False
         for _round in range(MAX_TOOL_ROUNDS):
+            round_had_text = False
             with anthropic_client.messages.stream(
                 model=settings.anthropic_model,
                 max_tokens=1024,
@@ -70,9 +72,14 @@ def orchestrate_chat(
             ) as stream:
                 for event in stream:
                     if event.type == "text":
+                        text = event.text
+                        if pending_separator:
+                            text = "\n\n" + text
+                            pending_separator = False
+                        round_had_text = True
                         yield {
                             "type": "text_delta",
-                            "content": strip_emojis(event.text),
+                            "content": strip_emojis(text),
                         }
 
                 final_message = stream.get_final_message()
@@ -93,6 +100,11 @@ def orchestrate_chat(
                 conversation.add_message("assistant", full_text)
                 yield {"type": "done"}
                 return
+
+            # More rounds to come — make sure the next round's first text
+            # delta is separated from this round's text by a paragraph break.
+            if round_had_text:
+                pending_separator = True
 
             # Execute tools and build results for next round
             tool_result_blocks: list[ToolResultBlockParam] = []
