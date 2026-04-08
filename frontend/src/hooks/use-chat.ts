@@ -107,6 +107,13 @@ export function useChat() {
 
             case "done":
               setStatus("idle");
+              setMessages((prev) =>
+                prev.map((msg) =>
+                  msg.id === assistantId
+                    ? { ...msg, timestamp: Date.now() }
+                    : msg,
+                ),
+              );
               break;
 
             case "error":

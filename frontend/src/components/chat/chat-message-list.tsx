@@ -31,9 +31,16 @@ export function ChatMessageList({
   return (
     <div className="min-h-0 flex-1 overflow-y-auto px-4">
       <div className="flex flex-col gap-4 py-4">
-        {messages.map((msg) => (
-          <ChatMessage key={msg.id} message={msg} />
-        ))}
+        {messages.map((msg, index) => {
+          const isLast = index === messages.length - 1;
+          const isStreaming =
+            isLast &&
+            msg.role === "assistant" &&
+            (status === "streaming" || status === "tool_calling");
+          return (
+            <ChatMessage key={msg.id} message={msg} isStreaming={isStreaming} />
+          );
+        })}
         {status === "streaming" && messages[messages.length - 1]?.content === "" && (
           <TypingIndicator />
         )}
