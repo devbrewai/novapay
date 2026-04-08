@@ -26,7 +26,7 @@ interface ChatEmptyStateProps {
 export function ChatEmptyState({ onPromptClick }: ChatEmptyStateProps) {
   return (
     <div className="flex flex-1 flex-col justify-end gap-4 px-6 pb-6 animate-in fade-in duration-500">
-      <h3 className="text-base font-semibold text-foreground">
+      <h3 className="text-sm font-semibold text-foreground">
         Hey, Alex. How can I be helpful?
       </h3>
       <ul className="flex flex-col">
