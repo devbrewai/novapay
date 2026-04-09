@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Layout } from "@/components/layout";
 import { AccountSummary } from "@/components/account-summary";
 import { TransactionList } from "@/components/transaction-list";
@@ -163,20 +164,23 @@ function PlaceholderPage({ title }: { title: string }) {
 
 function App() {
   return (
-    <Layout>
-      {(activePage: Page) => {
-        switch (activePage) {
-          case "home":
-            return <HomePage />;
-          case "transactions":
-            return <PlaceholderPage title="Transactions" />;
-          case "cards":
-            return <PlaceholderPage title="Cards" />;
-          case "settings":
-            return <PlaceholderPage title="Settings" />;
-        }
-      }}
-    </Layout>
+    <>
+      <Layout>
+        {(activePage: Page) => {
+          switch (activePage) {
+            case "home":
+              return <HomePage />;
+            case "transactions":
+              return <PlaceholderPage title="Transactions" />;
+            case "cards":
+              return <PlaceholderPage title="Cards" />;
+            case "settings":
+              return <PlaceholderPage title="Settings" />;
+          }
+        }}
+      </Layout>
+      <Analytics />
+    </>
   );
 }
 
